@@ -1,0 +1,143 @@
+---
+import Layout from "../layouts/Layout.astro";
+import Navbar from "../components/Navbar.astro";
+import Footer from "../components/Footer.astro";
+import Hero from "../components/Hero.astro";
+import Caja from "../components/Caja.astro";
+
+import { servicios } from "../data/servicios.js";
+import Crumble from "../components/Crumble.astro";
+import Tecnologias from "../components/Tecnologias.astro";
+import AboutUs from "../components/AboutUs.astro";
+---
+
+<Layout title="Flint - Marketing Agency">
+  <Navbar />
+  <Hero />
+  <section>
+    <img
+      width="100"
+      height="100"
+      loading="lazy"
+      src="/arbol2.avif"
+      alt="un pajaro en una arbol, el pajaro es la mascota de flint"
+      class="hidden md:block absolute bottom-[-800px] w-80 h-auto z-0"
+    />
+    <img
+      width="100"
+      height="100"
+      loading="lazy"
+      src="/pajaroRama.avif"
+      alt="un pajaro en una rama, es la mascota de flint"
+      class="hidden absolute w-24 h-auto z-0 right-0 md:right-[0px] md:top-[950px] md:w-60 lg:w-72 md:inline-block"
+    />
+    <!-- 
+    <img
+      width="100"
+      height="100"
+      loading="lazy"
+      src="/bird.png"
+      alt="un pajaro en una arbol, el pajaro es la mascota de flint"
+      class="md:block absolute bottom-[-2000px] left-4 w-40 h-auto z-0 lg:hidden"
+    />
+    
+    <img
+      width="100"
+      height="100"
+      loading="lazy"
+      src="/pajaroRama.avif"
+      alt="un pajaro en una rama, es la mascota de flint"
+      class="absolute w-24 h-auto z-0 lg:right-0 top-[1300px] lg:top-[2100px] md:top-[890px] md:w-60 lg:w-72"
+    />
+    
+    <img
+      width="100"
+      height="100"
+      loading="lazy"
+      src="/arbol2.avif"
+      alt="un pajaro en una arbol, el pajaro es la mascota de flint"
+      class="hidden md:block absolute bottom-[-800px] w-80 h-auto z-0"
+    />
+    <img
+      width="100"
+      height="100"
+      loading="lazy"
+      src="/pajaroRama.avif"
+      alt="un pajaro en una rama, es la mascota de flint"
+      class="absolute w-24 h-auto z-0 right-0 top-[2700px] md:right-[0px] lg:top-[800px] md:top-[890px] md:w-60 lg:w-72"
+    />
+    -->
+  </section>
+
+  <section class="relative mt-10">
+    <div class="p-8">
+      <h1 class="text-2xl md:text-center md:text-5xl lg:p-24 lg:text-7xl">
+        Nuestros mejores <b
+          class="text-3xl uppercase block md:text-6xl lg:text-8xl gradient-text font-extrabold"
+          >servicios</b
+        >
+      </h1>
+    </div>
+    <div class="grid gap-5 grid-cols-2 md:grid-cols-3 w-[85%] m-auto">
+      {
+        servicios.map((servicio) =>
+          servicio.isTopSales ? <Caja servicio={servicio} /> : null
+        )
+      }
+    </div>
+    <div class="flex justify-end w-[85%] m-auto mt-3">
+      <a href="/servicios">Ver mas &RightArrow;</a>
+    </div>
+  </section>
+
+  <section class="mt-10 z-0">
+    <div class="p-8 text-end">
+      <h1 class="text-2xl md:text-5xl lg:text-7xl md:text-center lg:pt-24">
+        Estos <b
+          class="uppercase gradient-text font-extrabold text-3xl
+          md:text-6xl lg:text-8xl"
+          >bundles</b
+        >
+      </h1>
+      <h1 class="text-2xl md:text-5xl lg:text-7xl md:text-center">
+        le daran un
+      </h1>
+      <h1 class="md:text-center lg:pb-24 text-2xl md:text-5xl lg:text-7xl">
+        <b
+          class="uppercase gradient-text font-extrabold text-3xl
+        md:text-6xl lg:text-8xl"
+          >boost</b
+        > a tu empresa
+      </h1>
+    </div>
+    <Crumble />
+  </section>
+
+  <section class="mt-10 lg:pt-24">
+    <AboutUs />
+  </section>
+
+  <section class="mt-10 lg:pt-24">
+    <div class="p-8 text-center">
+      <h1 class="text-lg md:text-center lg:text-6xl pb-5">
+        Usamos las mejores <b
+          class="uppercase block gradient-text2 font-extraboldtext-3xl
+          md:text-6xl lg:text-8xl"
+          >Plataformas</b
+        >
+      </h1>
+      <h2
+        class="text-lg md:text-center lg:text-4xl gradient-text2 font-semibold"
+      >
+        Nuestras tecnologias favoritas
+      </h2>
+      <p class="lg:text-lg">
+        Estas son las tecnologias que mas nos gustan y usamos para darte los
+        mejores productos
+      </p>
+    </div>
+    <Tecnologias />
+  </section>
+
+  <Footer />
+</Layout>

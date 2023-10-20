@@ -1,0 +1,82 @@
+---
+const { title } = Astro.props;
+import { ViewTransitions } from "astro:transitions";
+---
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="description" content="Astro description" />
+    <meta name="viewport" content="width=device-width" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.ico" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@200;300;500;800;900&display=swap"
+      rel="preload"
+    />
+    <link rel="preload" href="/BG2.avif" as="image" />
+    <link rel="preload" href="/horneroDer.avif" as="image" />
+    <meta name="generator" content={Astro.generator} />
+    <title>{title}</title>
+    <ViewTransitions />
+  </head>
+  <body>
+    <slot />
+    <script>
+      const t = document.getElementById("closeBtn"),
+        e = document.querySelector(".p-0"),
+        n = document.getElementById("openBtn");
+      t.addEventListener("click", () => {
+        e.classList.toggle("hidden");
+      }),
+        n.addEventListener("click", () => {
+          e.classList.remove("hidden");
+        });
+    </script>
+
+    <style is:global>
+      body {
+        margin: 0;
+        padding: 0;
+        background: #1d1d1b;
+      }
+      html {
+        font-family: "Montserrat", sans-serif;
+        font-size: 16px;
+        color: #fff;
+      }
+      .glass {
+        background: rgba(255, 255, 255, 0.38);
+        border-radius: 16px;
+        box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+        backdrop-filter: blur(7.6px);
+        -webkit-backdrop-filter: blur(7.6px);
+        border: 1px solid rgba(255, 255, 255, 0.3);
+      }
+      .gradient-text {
+        background-image: linear-gradient(to top left, #586f7c, #dec998);
+        -webkit-background-clip: text;
+        background-clip: text;
+        color: transparent;
+      }
+      .gradient-text2 {
+        background-image: linear-gradient(to top left, #f2af50, #50b4f2);
+        -webkit-background-clip: text;
+        background-clip: text;
+        color: transparent;
+      }
+      .gradient-bg {
+        background: rgb(49, 45, 49);
+        background: linear-gradient(
+          149deg,
+          rgba(49, 45, 49, 1) 0%,
+          rgba(88, 111, 124, 1) 100%
+        );
+      }
+      --secundario: #1d1d1b;
+      --primario: #dec998;
+    </style>
+  </body>
+</html>
