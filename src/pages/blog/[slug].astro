@@ -20,7 +20,7 @@ const { post } = Astro.props;
 const { Content } = await post.render();
 ---
 
-<Layout title="Flint Blog - Marketing Agency">
+<Layout title={'Flint - ' + post.data.title}>
   <section class="px-14 lg:px-64">
     <h1 class="mb-10 text-xl lg:text-5xl font-bold mt-14">
       {post.data.title}
