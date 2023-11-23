@@ -3,6 +3,7 @@ export const servicios = [
         name: "SEO",
         description: "We'll optimize your website to rank higher in search engine results pages.",
         category: "web",
+        icon: "fas fa-search",
         isTopSales: true
     },
     {
