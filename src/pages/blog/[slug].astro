@@ -20,7 +20,7 @@ const { post } = Astro.props;
 const { Content } = await post.render();
 ---
 
-<Layout title={'Flint - ' + post.data.title}>
+<Layout title={"Flint - " + post.data.title}>
   <section class="px-14 lg:px-64">
     <h1 class="mb-10 text-xl lg:text-5xl font-bold mt-14">
       {post.data.title}
@@ -32,6 +32,7 @@ const { Content } = await post.render();
       class="rounded-lg"
       src={post.data.image}
       alt={post.data.title}
+      loading="eager"
       format="webp"
     />
 
@@ -39,14 +40,17 @@ const { Content } = await post.render();
       <div class="font-light text-gray-600">
         <a href="#" class="flex items-center mt-6 mb-6">
           <Image
-            width={60}
-            height={60}
+            width="60"
+            height="60"
             class="hidden object-cover w-14 h-14 mx-4 rounded-full sm:block"
             src={post.data.authorimg}
             alt={post.data.author}
+            loading="eager"
             format="webp"
           />
-          <h1 class="font-bold text-gray-400 hover:underline">{post.data.author}</h1>
+          <h1 class="font-bold text-gray-400 hover:underline">
+            {post.data.author}
+          </h1>
         </a>
       </div>
       <div>
