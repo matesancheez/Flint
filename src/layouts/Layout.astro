@@ -9,7 +9,6 @@ import Footer from "../components/Footer.astro";
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <meta name="description" content="Astro description" />
     <meta name="viewport" content="width=device-width" />
     <!--Metatags para compartir link -->
     <meta property="og:title" content="Flint Marketing Agency" />
@@ -17,8 +16,11 @@ import Footer from "../components/Footer.astro";
       property="og:description"
       content="Impulsa tu presencia en línea con nuestra agencia de marketing digital. Ofrecemos soluciones personalizadas que potencian tu marca, aumentan la visibilidad y generan resultados tangibles. Desde estrategias de SEO y gestión de redes sociales hasta campañas publicitarias efectivas, estamos aquí para llevarte al siguiente nivel digital. ¡Descubre cómo podemos hacer crecer tu negocio hoy!"
     />
-    <meta property="og:image" content="/flintClaroSolo2.png" />
-
+    <meta
+      property="og:image"
+      content="https://tubular-profiterole-4d2685.netlify.app/FlintClaroSolo.avif"
+    />
+    <meta name="generator" content={Astro.generator} />
     <link rel="icon" type="image/svg+xml" href="/favicon.ico" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -28,7 +30,7 @@ import Footer from "../components/Footer.astro";
     />
     <link rel="preload" href="/BG2.avif" as="image" />
     <link rel="preload" href="/horneroDer.avif" as="image" />
-    <meta name="generator" content={Astro.generator} />
+
     <title>{title}</title>
     <ViewTransitions />
   </head>
