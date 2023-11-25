@@ -11,19 +11,18 @@ import AboutUs from "../components/AboutUs.astro";
 
 <Layout title="Flint - Marketing Agency">
   <Hero />
-  <section>
-    <img
-      width="100"
-      height="100"
-      loading="eager"
-      src="/mascota1.png"
-      alt="un pajaro en una rama, es la mascota de flint"
-      class="hidden absolute h-auto z-0 lg:left-[100px] md:top-[950px] md:w-44 lg:w-72 md:inline-block"
-    />
-  </section>
+  <section></section>
 
   <section class="relative mt-10">
-    <div class="p-8">
+    <div class="p-8 flex justify-center">
+      <img
+        width="100"
+        height="100"
+        loading="eager"
+        src="/mascota1.png"
+        alt="mascota de flint"
+        class="hidden w-[250px] xl:w-[300px] h-[300px] xl:h-auto lg:inline"
+      />
       <h1 class="text-2xl md:text-center md:text-5xl lg:p-24 lg:text-7xl">
         Nuestros mejores <b
           class="text-3xl uppercase block md:text-6xl lg:text-8xl gradient-text font-extrabold"
@@ -72,7 +71,7 @@ import AboutUs from "../components/AboutUs.astro";
 
   <section class="mt-10 lg:pt-24">
     <div class="p-8 text-center">
-      <h1 class="text-lg md:text-center lg:text-6xl pb-5">
+      <h1 class="text-2xl md:text-center lg:text-6xl pb-5">
         Usamos las mejores <b
           class="uppercase block gradient-text2 font-extraboldtext-3xl
           md:text-6xl lg:text-8xl"
@@ -80,7 +79,7 @@ import AboutUs from "../components/AboutUs.astro";
         >
       </h1>
       <h2
-        class="text-lg md:text-center lg:text-4xl gradient-text2 font-semibold"
+        class="text-xl md:text-center lg:text-4xl gradient-text2 font-semibold"
       >
         Nuestras tecnologias favoritas
       </h2>

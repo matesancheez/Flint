@@ -34,7 +34,7 @@
         alt="mockup"
         width="auto"
         height="auto"
-        class="h-[500px] w-auto z-50"
+        class="h-[400px] xl:h-[500px] w-auto z-50"
       />
       <div>
         <img
@@ -43,7 +43,7 @@
           alt="mockup"
           width="auto"
           height="auto"
-          class="h-[200px] w-auto absolute right-[300px] top-[250px] z-0 flota"
+          class="h-[120px] xl:h-[200px] w-auto absolute right-[200px] xl:right-[300px] top-[250px] z-0 flota"
         />
         <img
           loading="eager"
@@ -51,7 +51,7 @@
           alt="mockup"
           width="auto"
           height="auto"
-          class="h-[170px] w-auto absolute right-[100px] top-[400px] z-0 flota2"
+          class="hidden xl:inline h-[170px] w-auto absolute right-[100px] top-[400px] z-0 flota2"
         />
       </div>
     </div>
@@ -70,15 +70,12 @@
 
   @keyframes float {
     0% {
-      box-shadow: 0 5px 15px 0px rgba(0, 0, 0, 0.6);
       transform: translatey(0px);
     }
     50% {
-      box-shadow: 0 25px 15px 0px rgba(0, 0, 0, 0.2);
       transform: translatey(-8px);
     }
     100% {
-      box-shadow: 0 5px 15px 0px rgba(0, 0, 0, 0.6);
       transform: translatey(0px);
     }
   }
