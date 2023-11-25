@@ -1,3 +1,7 @@
+---
+import { Image } from "astro:assets";
+---
+
 <section class="bg-black h-[60vh] md:h-[100vh] flex">
   <div
     class="grid max-w-screen-xl px-4 py-8 mx-auto lg:gap-8 xl:gap-0 lg:py-16 lg:grid-cols-12"
@@ -28,30 +32,33 @@
       </a>
     </div>
     <div class="hidden lg:mt-0 lg:col-span-5 lg:flex justify-end">
-      <img
+      <Image
         loading="eager"
         src="/mascota.png"
         alt="mockup"
-        width="auto"
-        height="auto"
+        width="100"
+        height="100"
         class="h-[400px] xl:h-[500px] w-auto z-50"
+        format="webp"
       />
       <div>
-        <img
-          loading="eager"
+        <Image
+          loading="lazy"
           src="/cloud.png"
           alt="mockup"
-          width="auto"
-          height="auto"
+          width="100"
+          height="100"
           class="h-[120px] xl:h-[200px] w-auto absolute right-[200px] xl:right-[300px] top-[250px] z-0 flota"
+          format="webp"
         />
-        <img
-          loading="eager"
+        <Image
+          loading="lazy"
           src="/cloud.png"
           alt="mockup"
-          width="auto"
-          height="auto"
+          width="100"
+          height="100"
           class="hidden xl:inline h-[170px] w-auto absolute right-[100px] top-[400px] z-0 flota2"
+          format="webp"
         />
       </div>
     </div>
