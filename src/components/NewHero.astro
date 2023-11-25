@@ -1,4 +1,4 @@
-<section class="bg-black h-[60vh] md:h-[100vh]">
+<section class="bg-black h-[60vh] md:h-[100vh] flex">
   <div
     class="grid max-w-screen-xl px-4 py-8 mx-auto lg:gap-8 xl:gap-0 lg:py-16 lg:grid-cols-12"
   >
@@ -29,12 +29,57 @@
     </div>
     <div class="hidden lg:mt-0 lg:col-span-5 lg:flex justify-end">
       <img
-        src="/newhero.jpg"
+        loading="eager"
+        src="/mascota.png"
         alt="mockup"
         width="auto"
         height="auto"
-        class="h-[80%]"
+        class="h-[500px] w-auto z-50"
       />
+      <div>
+        <img
+          loading="eager"
+          src="/cloud.png"
+          alt="mockup"
+          width="auto"
+          height="auto"
+          class="h-[200px] w-auto absolute right-[300px] top-[250px] z-0 flota"
+        />
+        <img
+          loading="eager"
+          src="/cloud.png"
+          alt="mockup"
+          width="auto"
+          height="auto"
+          class="h-[170px] w-auto absolute right-[100px] top-[400px] z-0 flota2"
+        />
+      </div>
     </div>
   </div>
 </section>
+<style>
+  .flota {
+    transform: translatey(0px);
+    animation: float 6s ease-in-out infinite;
+  }
+
+  .flota2 {
+    transform: translatey(0px);
+    animation: float 4s ease-in-out infinite;
+  }
+
+  @keyframes float {
+    0% {
+      box-shadow: 0 5px 15px 0px rgba(0, 0, 0, 0.6);
+      transform: translatey(0px);
+    }
+    50% {
+      box-shadow: 0 25px 15px 0px rgba(0, 0, 0, 0.2);
+      transform: translatey(-8px);
+    }
+    100% {
+      box-shadow: 0 5px 15px 0px rgba(0, 0, 0, 0.6);
+      transform: translatey(0px);
+    }
+  }
+</style>
