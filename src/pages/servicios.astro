@@ -1,7 +1,5 @@
 ---
 import Layout from "../layouts/Layout.astro";
-import Navbar from "../components/Navbar.astro";
-import Footer from "../components/Footer.astro";
 import Caja from "../components/Caja.astro";
 import Grilla from "../components/GrillaServicios.astro";
 
@@ -25,7 +23,7 @@ import { servicios } from "../data/servicios";
         {
           servicios.map((servicio) =>
             servicio.category === "marketing" ? (
-              <Caja servicio={servicio} />
+              <Caja servicio={servicio} color="#ef233c" colorTexto="#000" />
             ) : null
           )
         }
@@ -38,7 +36,9 @@ import { servicios } from "../data/servicios";
       <div class="grid grid-cols-2 md:grid-cols-3 gap-5">
         {
           servicios.map((servicio) =>
-            servicio.category === "web" ? <Caja servicio={servicio} /> : null
+            servicio.category === "web" ? (
+              <Caja servicio={servicio} color="#8d99ae" colorTexto="#000" />
+            ) : null
           )
         }
       </div>
@@ -51,7 +51,7 @@ import { servicios } from "../data/servicios";
         {
           servicios.map((servicio) =>
             servicio.category === "merchandise" ? (
-              <Caja servicio={servicio} />
+              <Caja servicio={servicio} color="#52796f" colorTexto="#fff" />
             ) : null
           )
         }

@@ -1,6 +1,6 @@
 ---
 import Layout from "../layouts/Layout.astro";
-import Hero from "../components/NewHero.astro";
+import Hero from "../components/Hero.astro";
 import Caja from "../components/Caja.astro";
 import { Image } from "astro:assets";
 import mascota1 from "../assets/mascota1.png";
@@ -35,7 +35,21 @@ import AboutUs from "../components/AboutUs.astro";
     <div class="grid gap-5 grid-cols-2 md:grid-cols-3 w-[85%] m-auto">
       {
         servicios.map((servicio) =>
-          servicio.isTopSales ? <Caja servicio={servicio} /> : null
+          servicio.isTopSales ? (
+            servicio.category === "marketing" ? (
+              <a href="/servicios">
+                <Caja servicio={servicio} color="#dec998" colorTexto="black" />
+              </a>
+            ) : servicio.category === "web" ? (
+              <a href="/servicios">
+                <Caja servicio={servicio} color="#8d99ae" colorTexto="black" />
+              </a>
+            ) : servicio.category === "merchandise" ? (
+              <a href="/servicios">
+                <Caja servicio={servicio} color="#52796f" colorTexto="black" />
+              </a>
+            ) : null
+          ) : null
         )
       }
     </div>
