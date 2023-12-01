@@ -1,7 +1,7 @@
 export const bundles = [
     {
-        nombre: "Pack 1",
-        descripcion: "Pack  que hace algo mejor que nada qe el pack 0 Pack  que hace algo mejor que nada q",
+        nombre: "Launch",
+        descripcion: "Para darle vida a tu proyecto",
         platform : [
                     {nombre: "TikTok", incluido: true}, 
                     {nombre: "Instagram", incluido: false}, 
@@ -16,8 +16,8 @@ export const bundles = [
                 ]
     },
     {
-        nombre: "Pack 2",
-        descripcion: "Pack 2 que hace algo mejor que el pack 1",
+        nombre: "Detach",
+        descripcion: "Expandí tu proyecto al mundo digital",
         platform : [
                     {nombre: "TikTok", incluido: true}, 
                     {nombre: "Instagram", incluido: false}, 
@@ -33,8 +33,8 @@ export const bundles = [
     }
     ,
     {
-        nombre: "Pack 3",
-        descripcion: "Pack 3 que hace algo mejor que el pack 2",
+        nombre: "Deploy",
+        descripcion: "Potenciá tus redes personalizadas a medida",
         platform : [
                     {nombre: "TikTok", incluido: false}, 
                     {nombre: "Instagram", incluido: true}, 
@@ -50,8 +50,8 @@ export const bundles = [
     }
     ,
     {
-        nombre: "Pack 4",
-        descripcion: "Pack 4 que hace algo mejor que el pack 3",
+        nombre: "BBC",
+        descripcion: "Llevá 4 PRODUCTOS Flint y te hacemos precio",
         platform : [
                     {nombre: "TikTok", incluido: true}, 
                     {nombre: "Instagram", incluido: true}, 

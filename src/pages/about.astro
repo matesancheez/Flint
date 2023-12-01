@@ -1,7 +1,190 @@
-<div>
-  <div
-    class="mn tk amn amr anq bba"
-    style="clip-path: polygon(73.6% 51.7%, 91.7% 11.8%, 100% 46.4%, 97.4% 82.2%, 92.5% 84.9%, 75.7% 64%, 55.3% 47.5%, 46.5% 49.4%, 45% 62.9%, 50.3% 87.2%, 21.3% 64.1%, 0.1% 100%, 5.4% 51.1%, 21.4% 63.9%, 58.9% 0.2%, 73.6% 51.7%);"
-  >
+---
+import { Image } from "astro:assets";
+import mascota1 from "../assets/mascota1.png";
+import mascota from "../assets/mascota.png";
+import Layout from "../layouts/Layout.astro";
+---
+
+<Layout title="Flint - Nosotros">
+  <div class="p-10">
+    <div>
+      <div>
+        <h1 class="text-3xl lg:text-6xl font-bold">Nosotros</h1>
+        <!--primera caja -->
+        <div class="mx-auto lg:flex items-center">
+          <div>
+            <p class="text-md lg:text-2xl w-[90%] mt-10">
+              En Flint, adoptamos la dedicación y el ingenio del hornero cuando
+              construye su nido para crear campañas digitales excepcionales. Al
+              igual que el hornero selecciona cada material con precisión,
+              nosotros elegimos estrategias específicas para cada cliente,
+              asegurándonos de que cada elemento contribuya al éxito general de
+              la campaña.
+            </p>
+            <p class="text-md lg:text-2xl w-[90%] mt-5">
+              Así como el hornero se sumerge en su tarea con pasión, en nuestra
+              agencia, nos entregamos por completo a cada proyecto. Cada vuelo
+              de retorno al nido del hornero es como nuestras constantes
+              revisiones y ajustes, siempre buscando mejorar y perfeccionar cada
+              detalle.
+            </p>
+          </div>
+
+          <div class="">
+            <Image
+              width="1000"
+              height="1000"
+              loading="eager"
+              src={mascota1}
+              alt="mascota de flint"
+              class="hidden w-[800px] lg:inline"
+              format="webp"
+            />
+          </div>
+        </div>
+        <!--Segunda caja -->
+        <div class="mx-auto lg:flex items-center flex-row-reverse mt-5">
+          <div>
+            <p class="text-md lg:text-2xl w-[90%] mt-10 lg:text-end">
+              En Flint, adoptamos la dedicación y el ingenio del hornero cuando
+              construye su nido para crear campañas digitales excepcionales. Al
+              igual que el hornero selecciona cada material con precisión,
+              nosotros elegimos estrategias específicas para cada cliente,
+              asegurándonos de que cada elemento contribuya al éxito general de
+              la campaña.
+            </p>
+          </div>
+          <div>
+            <Image
+              width="1000"
+              height="1000"
+              loading="eager"
+              src={mascota}
+              alt="mascota de flint"
+              class="hidden w-[1000px] lg:inline"
+              format="webp"
+            />
+          </div>
+        </div>
+      </div>
+      <!--Seccion de  mision y vision -->
+      <div class="mt-32">
+        <div class="flex justify-center py-10">
+          <div class="">
+            <h2 class="text-3xl font-bold">Mision</h2>
+            <p class="text-xl pt-7">
+              Ofrecer al mercado argentino un modelo de oferta <b
+                >transparente</b
+              >
+               de agencia de marketing digital en la que se priorice el vínculo
+              con el cliente, integrándolo activamente al equipo de trabajo.
+            </p>
+            <p class="text-xl">
+              Nuestra misión es ofrecer nuestros servicios de la forma más
+              transparente posible, vinculándonos con cada cliente de una forma <b
+                >única y personalizada.</b
+              >
+            </p>
+          </div>
+        </div>
+
+        <div class="flex justify-center py-10">
+          <div class="">
+            <h2 class="text-3xl font-bold">Vision</h2>
+            <p class="text-xl pt-7">
+              Convertir a Flint en una agencia <b>TOP</b> en el mercado global,
+              trasladando los diferenciales de la cultura <b>Argentina</b> a
+              todo el mundo, conformada por un equipo de trabajo con reputación
+              internacional.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!--Seccion de personas -->
+    <div class="mt-28">
+      <h2 class="text-6xl font-bold text-center">Nuestro equipo</h2>
+      <!--Primera Persona -->
+      <div class="mt-10">
+        <div
+          class="mx-auto p-8 lg:flex items-center justify-between bg-black w-[80vw]"
+        >
+          <div class="flex justify-center lg:hidden">
+            <Image
+              width="1000"
+              height="1000"
+              loading="eager"
+              src={mascota1}
+              alt="mascota de flint"
+              class="w-[200px]"
+              format="webp"
+            />
+          </div>
+
+          <!-- Información de la Persona (3/4 del ancho) -->
+          <div class="text-center lg:text-start">
+            <h1 class="text-4xl font-bold mb-4">Nicolas Dousset</h1>
+            <p class="text-lg mb-4">Data</p>
+            <p>
+              Breve descripción sobre la persona. Puedes agregar más detalles
+              aquí.
+            </p>
+          </div>
+
+          <!-- Imagen de la Persona (1/4 del ancho) -->
+          <div class="flex justify-center">
+            <Image
+              width="1000"
+              height="1000"
+              loading="eager"
+              src={mascota1}
+              alt="mascota de flint"
+              class="hidden w-[300px] lg:inline"
+              format="webp"
+            />
+          </div>
+        </div>
+      </div>
+      <!--Segunda Persona -->
+      <div class="mt-10">
+        <div
+          class="mx-auto p-8 lg:flex items-center justify-between bg-black flex-row-reverse w-[80vw]"
+        >
+          <div class="flex justify-center lg:hidden">
+            <Image
+              width="1000"
+              height="1000"
+              loading="eager"
+              src={mascota1}
+              alt="mascota de flint"
+              class="w-[200px]"
+              format="webp"
+            />
+          </div>
+
+          <div class="text-center lg:text-start lg:w-[80%]">
+            <h1 class="text-4xl font-bold mb-4">Julian Gonzalez</h1>
+            <p class="text-lg mb-4">Data</p>
+            <p>
+              Breve descripción sobre la persona. Puedes agregar más detalles
+              aquí.
+            </p>
+          </div>
+
+          <div class="flex justify-center">
+            <Image
+              width="1000"
+              height="1000"
+              loading="eager"
+              src={mascota1}
+              alt="mascota de flint"
+              class="hidden w-[300px] lg:inline"
+              format="webp"
+            />
+          </div>
+        </div>
+      </div>
+    </div>
   </div>
-</div>
+</Layout>

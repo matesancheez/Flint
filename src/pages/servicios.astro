@@ -23,7 +23,7 @@ import { servicios } from "../data/servicios";
         {
           servicios.map((servicio) =>
             servicio.category === "marketing" ? (
-              <Caja servicio={servicio} color="#ef233c" colorTexto="#000" />
+              <Caja servicio={servicio} color="#dec998" colorTexto="#000" />
             ) : null
           )
         }
@@ -45,12 +45,12 @@ import { servicios } from "../data/servicios";
       <h1
         class="py-10 text-xl uppercase md:text-2xl lg:text-4xl gradient-text2 font-bold"
       >
-        Merchandise
+        diseño
       </h1>
       <div class="grid grid-cols-2 md:grid-cols-3 gap-5">
         {
           servicios.map((servicio) =>
-            servicio.category === "merchandise" ? (
+            servicio.category === "diseno" ? (
               <Caja servicio={servicio} color="#52796f" colorTexto="#fff" />
             ) : null
           )

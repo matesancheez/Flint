@@ -11,8 +11,8 @@ import questions from "../data/FAQ.js";
         <h2 class="text-3xl font-bold mt-5 tracking-tight text-[#dec998]">
           FAQ
         </h2>
-        <p class="text-neutral-500 text-2xl mt-3 text-center">
-          Frequenty asked questions
+        <p class="text-gray-200 text-2xl mt-3 text-center">
+          Preguntas frecuentes
         </p>
       </div>
       <div class="grid divide-y divide-neutral-200 max-w-xl mx-auto mt-8">
@@ -20,7 +20,7 @@ import questions from "../data/FAQ.js";
           questions.map((pregunta) => (
             <div class="py-5">
               <details class="group">
-                <summary class="flex justify-between items-center font-medium cursor-pointer list-none">
+                <summary class="flex justify-between items-center font-bold cursor-pointer list-none">
                   <span> {pregunta.question}</span>
                   <span class="transition group-open:rotate-180">
                     <svg
@@ -38,7 +38,7 @@ import questions from "../data/FAQ.js";
                     </svg>
                   </span>
                 </summary>
-                <p class="text-neutral-600 mt-3 group-open:animate-fadeIn">
+                <p class=" text-[#dec998] mt-3 group-open:animate-fadeIn">
                   {pregunta.answer}
                 </p>
               </details>

@@ -1,128 +1,116 @@
 export const servicios = [
     {
         name: "SEO",
-        description: "We'll optimize your website to rank higher in search engine results pages.",
-        category: "web",
+        description: "Aumentamos tu visibilidad en los motores de búsqueda para que tu audiencia te encuentre fácilmente. ¡Posicioná tu marca en lo más alto de las SERP’s!",
+        category: "marketing",
         icon: '/icons/seo.png',
         isTopSales: true
     },
     {
-        name: "Pay-Per-Click Advertising",
-        description: "We'll create and manage PPC campaigns to drive traffic to your website.",
-        category: "web",
-        icon: '/icons/web.png',
-        isTopSales: false
-    },
-    {
-        name: "Content Marketing",
-        description: "We'll create and distribute valuable content to attract and retain a clearly defined audience.",
-        category: "merchandise",
-        icon: '/icons/merch.png',
-        isTopSales: false
-    },
-    {
-        name: "Influencer Marketing",
-        description: "We'll partner with influencers to promote your brand and reach a wider audience.",
+        name: "Gestión de Redes Sociales",
+        description: "Creamos estrategias para redes impactantes para construir una comunidad leal alrededor de tu marca. ¡Convierte seguidores en clientes!",
         category: "marketing",
+        icon: '/icons/web.png',
+        isTopSales: true
+    },
+    {
+        name: "Diseño Gráfico Creativo",
+        description: "Desde logotipos hasta material promocional, creamos piezas de diseño a medida. Fortalece la identidad de tu marca.",
+        category: "diseno",
+        icon: '/icons/merch.png',
+        isTopSales: true
+    },
+    
+    {
+        name: "Diseño Web y Desarrollo Personalizado",
+        description: "Diseñamos sitios web atractivos y funcionales para tus visitantes. Convierte clics en clientes.",
+        category: "web",
         icon: '/icons/marketing.png',
         isTopSales: true
     },
     {
-        name: "Video Marketing",
-        description: "We'll create engaging video content to promote your brand and products.",
-        category: "merchandise",
+        name: "Campañas Publicitarias Eficientes (SEM)",
+        description: "Gestión de campañas publicitarias  en Google Ads. Asegurate que tu mensaje llegue a quienes más importan.",
+        category: "marketing",
         icon: '/icons/merch.png',
-        isTopSales: false
+        isTopSales: true
     },
+    
     {
-        name: "Event Marketing",
-        description: "We'll plan and execute events to promote your brand and products.",
-        category: "web",
+        name: "Consultoría Estratégica",
+        description: "Desarrollamos soluciones estratégicas a medida para hacer crecer tu empresa . Destaca con tu marca en el mercado competitivo.",
+        category: "marketing",
         icon: '/icons/web.png',
-        isTopSales: false
+        isTopSales: true
     },
     {
-        name: "Affiliate Marketing",
+        name: "Redacción de Campaña Publicitaria",
         description: "We'll partner with affiliates to promote your products and earn commissions on sales.",
         category: "marketing",
         icon: '/icons/marketing.png',
-        isTopSales: true
+        isTopSales: false
     },
     {
-        name: "Brand Management",
-        description: "We'll help you develop and maintain a strong brand identity.",
-        category: "merchandise",
+        name: "RRSS",
+        description: "Potencia tu presencia en redes sociales con nuestra gestión integral. Desde contenido a interacción, optimizamos tu visibilidad y participación en plataformas clave, impulsando tu marca digital.",
+        category: "marketing",
         icon: '/icons/merch.png',
         isTopSales: false
     },
     {
-        name: "Market Research",
-        description: "We'll conduct market research to help you better understand your target audience.",
-        category: "web",
-        icon: '/icons/web.png',
-        isTopSales: true
-    },
-    {
-        name: "Public Relations",
-        description: "We'll manage your public image and help you build relationships with the media.",
+        name: "Publicidad en Línea",
+        description: "Alcanza tu audiencia de manera efectiva con campañas publicitarias personalizadas. Desde Google hasta redes sociales, maximizamos tu retorno de inversión, aumentando tu visibilidad y conversión.",
         category: "marketing",
-        icon: '/icons/marketing.png',
-        isTopSales: false
-    },
-    {
-        name: "Web Design",
-        description: "We'll design and develop a website that showcases your brand and products.",
-        category: "web",
         icon: '/icons/web.png',
         isTopSales: false
     },
     {
-        name: "Graphic Design",
-        description: "We'll create visually appealing graphics to promote your brand and products.",
-        category: "merchandise",
-        icon: '/icons/merch.png',
-        isTopSales: true
+        name: "SEO",
+        description: "Eleva tu posición en motores de búsqueda con nuestra estrategia SEO. Optimizamos contenido y palabras clave para aumentar tu visibilidad orgánica, destacando en búsquedas locales o globales.",
+        category: "marketing",
+        icon: '/icons/web.png',
+        isTopSales: false
     },
     {
-        name: "Branded Merchandise",
-        description: "We'll create branded merchandise to help promote your brand and products.",
-        category: "merchandise",
+        name: "Consultoría Estratégica",
+        description: "Desarrolla una visión eficiente para tu presencia en línea con nuestra consultoría. Analizamos mercado y competencia para maximizar resultados digitales, guiándote desde oportunidades hasta gestión de crisis.",
+        category: "marketing",
         icon: '/icons/merch.png',
         isTopSales: false
     },
     {
-        name: "Mobile Marketing",
-        description: "We'll create and manage mobile marketing campaigns to reach your target audience on their devices.",
+        name: "Redacción de Campaña",
+        description: "Inicia tu campaña correctamente con nuestro servicio de redacción de briefs. Sumérgete en tu marca, objetivos y audiencia para crear un documento claro que guíe a tu equipo y colaboradores externos, asegurando alineación desde el principio.",
         category: "marketing",
+        icon: '/icons/merch.png',
+        isTopSales: false
+    },
+    {
+        name: "Diseño de producto",
+        description: "Merchandising; Packaging: Potenciamos tu marca con diseño de producto de calidad. Desde merchandising hasta packaging, creamos soluciones visuales atractivas que destacan en el mercado.",
+        category: "diseno",
         icon: '/icons/marketing.png',
         isTopSales: false
     },
     {
-        name: "Direct Mail Marketing",
-        description: "We'll create and send direct mail campaigns to your target audience.",
-        category: "marketing",
+        name: "Editorial",
+        description: " Piezas: Dale vida a tus ideas con nuestro diseño editorial. Desde piezas gráficas hasta diseños complejos, damos forma a tu contenido para que destaque y se comunique de manera efectiva.",
+        category: "diseno",
         icon: '/icons/marketing.png',
         isTopSales: false
     },
     {
-        name: "Podcast Advertising",
-        description: "We'll create and manage podcast advertising campaigns to reach your target audience.",
-        category: "marketing",
+        name: "Identidad Corporativa",
+        description: "Crea una identidad única con nuestro servicio de diseño corporativo. Desarrollamos logotipos y elementos visuales que reflejan la esencia de tu marca, asegurando coherencia y reconocimiento.",
+        category: "diseno",
         icon: '/icons/marketing.png',
         isTopSales: false
     },
     {
-        name: "SMS Marketing",
-        description: "We'll create and manage SMS marketing campaigns to reach your target audience on their phones.",
-        category: "marketing",
+        name: "Papelería y publicidad",
+        description: "Impulsa tu presencia con nuestra creatividad en papelería y publicidad. Desde tarjetas de presentación hasta campañas publicitarias, diseñamos material impactante que deja una impresión duradera.",
+        category: "diseno",
         icon: '/icons/marketing.png',
         isTopSales: false
-    },
-    {
-        name: "In-Store Promotions",
-        description: "We'll create and execute in-store promotions to drive traffic to your physical locations.",
-        category: "web",
-        icon: '/icons/web.png',
-        isTopSales: true
     }
 ];

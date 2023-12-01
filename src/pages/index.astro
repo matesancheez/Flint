@@ -12,7 +12,6 @@ import AboutUs from "../components/AboutUs.astro";
 
 <Layout title="Flint - Marketing Agency">
   <Hero />
-  <section></section>
 
   <section class="relative mt-10">
     <div class="p-8 flex justify-center">
@@ -26,7 +25,7 @@ import AboutUs from "../components/AboutUs.astro";
         format="webp"
       />
       <h1 class="text-2xl md:text-center md:text-5xl lg:p-24 lg:text-7xl">
-        Nuestros mejores <b
+        Nuestra selección de<b
           class="text-3xl uppercase block md:text-6xl lg:text-8xl gradient-text font-extrabold"
           >servicios</b
         >
@@ -44,7 +43,7 @@ import AboutUs from "../components/AboutUs.astro";
               <a href="/servicios">
                 <Caja servicio={servicio} color="#8d99ae" colorTexto="black" />
               </a>
-            ) : servicio.category === "merchandise" ? (
+            ) : servicio.category === "diseno" ? (
               <a href="/servicios">
                 <Caja servicio={servicio} color="#52796f" colorTexto="black" />
               </a>
@@ -75,7 +74,7 @@ import AboutUs from "../components/AboutUs.astro";
           class="uppercase gradient-text font-extrabold text-3xl
         md:text-6xl lg:text-8xl"
           >boost</b
-        > a tu empresa
+        > a tu marca
       </h1>
     </div>
     <Crumble />

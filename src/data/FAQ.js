@@ -1,84 +1,45 @@
 const faq = [
     {
-        question: "What is Flint?",
-        answer: "Flint is a JavaScript library for building user interfaces."
+        question: "¿Cómo puedo iniciar una colaboración con su agencia?",
+        answer: "Puedes ponerte en contacto con nosotros a través del formulario disponible en esta web!"
     },
     {
-        question: "What are the benefits of using Flint?",
-        answer: "Flint provides a simple and intuitive API, efficient rendering, and easy state management."
+        question: "¿Trabajan con empresas de cualquier tamaño o industria?",
+        answer: "¡Sí! En Flint, valoramos todo tipo de oferta, siempre y cuando el objetivo sea crecer!"
     },
     {
-        question: "How do I install Flint?",
-        answer: "You can install Flint using npm: npm install flint-ui"
+        question: "¿Cómo determinan la estrategia de SEO para cada cliente?",
+        answer: "Todos nuestros clientes que se involucran en un proyecto de SEO pasan por nuestro CHECKLIST, que detalla paso a paso los requisitos que debe cumplir la marca para poder luego diseñar una estrategia de palabras clave."
     },
     {
-        question: "What is JSX?",
-        answer: "JSX is a syntax extension for JavaScript that allows you to write HTML-like code in your JavaScript files."
+        question: "¿Cuál es la diferencia entre la consultoría estratégica y otros servicios que ofrecen?",
+        answer: "La Consultoría Estratégica se distingue por ser un servicio integral que se enfoca en proporcionar orientación de alto nivel para la planificación y ejecución de estrategias digitales."
     },
     {
-        question: "How do I use Flint with JSX?",
-        answer: "You can use Flint components in your JSX code just like any other HTML element."
+        question: "¿Cuáles son las opciones de pago?",
+        answer: "Trabajamos con todos los medios de pago."
     },
     {
-        question: "What is the difference between props and state?",
-        answer: "Props are used to pass data from a parent component to a child component, while state is used to manage data within a component."
+        question: "¿Tienen experiencia trabajando con empresas locales e internacionales?",
+        answer: "Sí, todos los proyectos actuales, en proceso y terminados, pueden encontrarlos en la sección 'Nosotros'."
     },
     {
-        question: "How do I update state?",
-        answer: "You can update state using the setState method."
+        question: "¿Pueden ayudar con la creación de contenido para mis campañas?",
+        answer: "Contamos con un equipo anexado capacitado especialmente para darle la mejor calidad a cualquiera de tus campañas."
     },
     {
-        question: "What is the virtual DOM?",
-        answer: "The virtual DOM is a lightweight representation of the actual DOM that allows for efficient updates and rendering."
+        question: "¿Cuál es la duración típica de una colaboración con su agencia?",
+        answer: "En Flint, queremos prolongar nuestro vínculo con cada cliente lo máximo posible, alcanzado una relación que agrega valor en cada etapa de la vida útil de la marca."
     },
     {
-        question: "What is the difference between a functional component and a class component?",
-        answer: "Functional components are stateless and are defined as functions, while class components have state and are defined as classes."
+        question: "¿Ofrecen servicios de capacitación en marketing digital para equipos internos?",
+        answer: "Si, contamos con un curso gratuito de 3 clases en Domestika "
     },
     {
-        question: "What is the difference between a controlled component and an uncontrolled component?",
-        answer: "A controlled component is a component that is controlled by React, while an uncontrolled component is a component that is controlled by the user."
-    },
-    {
-        question: "What is the difference between a container component and a presentational component?",
-        answer: "A container component is a component that manages state and data, while a presentational component is a component that is concerned with rendering and displaying data."
-    },
-    {
-        question: "What is Redux?",
-        answer: "Redux is a predictable state container for JavaScript apps."
-    },
-    {
-        question: "How do I use Redux with Flint?",
-        answer: "You can use the react-redux library to connect your Flint components to your Redux store."
-    },
-    {
-        question: "What is the Flux architecture?",
-        answer: "The Flux architecture is a pattern for managing data flow in your application."
-    },
-    {
-        question: "What is the difference between Flux and Redux?",
-        answer: "Redux is a implementation of the Flux architecture with some differences, such as a single store and immutable state."
-    },
-    {
-        question: "What is the difference between a reducer and an action?",
-        answer: "A reducer is a function that takes the current state and an action and returns a new state, while an action is an object that describes a change to the state."
-    },
-    {
-        question: "What is the difference between a synchronous action and an asynchronous action?",
-        answer: "A synchronous action is an action that is immediately dispatched and executed, while an asynchronous action is an action that is dispatched and executed at a later time, such as after a network request."
-    },
-    {
-        question: "What is the difference between a middleware and a reducer?",
-        answer: "A middleware is a function that intercepts and processes actions before they reach the reducer, while a reducer is a function that takes the current state and an action and returns a new state."
-    },
-    {
-        question: "What is the difference between mapStateToProps and mapDispatchToProps?",
-        answer: "mapStateToProps is a function that maps state to props, while mapDispatchToProps is a function that maps dispatch to props."
-    },
-    {
-        question: "What is the difference between a presentational component and a container component?",
-        answer: "A presentational component is a component that is concerned with rendering and displaying data, while a container component is a component that manages state and data."
+        question: "¿Cómo puedo ponerme en contacto con su equipo en caso de preguntas adicionales o consultas?",
+        answer: "Una vez que te hayas contactado con nosotros a través del formulario de contacto, podemos dar contacto directo por cualquier medio que te sea conveniente."
     }
 ];
+
 
 export default faq;
