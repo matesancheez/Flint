@@ -21,7 +21,7 @@ import AboutUs from "../components/AboutUs.astro";
         loading="eager"
         src={mascota1}
         alt="mascota de flint"
-        class="hidden w-[250px] xl:w-[300px] h-[300px] xl:h-auto lg:inline"
+        class="hidden w-[300px] xl:w-[300px] h-[300px] xl:h-auto lg:inline"
         format="webp"
       />
       <h1 class="text-2xl md:text-center md:text-5xl lg:p-24 lg:text-7xl">
@@ -41,11 +41,11 @@ import AboutUs from "../components/AboutUs.astro";
               </a>
             ) : servicio.category === "web" ? (
               <a href="/servicios#web">
-                <Caja servicio={servicio} color="#3F88C5" colorTexto="black" />
+                <Caja servicio={servicio} color="#3F88C5" colorTexto="white" />
               </a>
             ) : servicio.category === "diseno" ? (
               <a href="/servicios#diseno">
-                <Caja servicio={servicio} color="#916953" colorTexto="black" />
+                <Caja servicio={servicio} color="#916953" colorTexto="white" />
               </a>
             ) : null
           ) : null
