@@ -16,6 +16,7 @@ import { servicios } from "../data/servicios";
       >
       <h1
         class="py-10 text-xl uppercase md:text-2xl lg:text-4xl gradient-text2 font-bold"
+        id="marketing"
       >
         Marketing
       </h1>
@@ -30,6 +31,7 @@ import { servicios } from "../data/servicios";
       </div>
       <h1
         class="py-10 text-xl uppercase md:text-2xl lg:text-4xl gradient-text2 font-bold"
+        id="web"
       >
         Web
       </h1>
@@ -37,13 +39,14 @@ import { servicios } from "../data/servicios";
         {
           servicios.map((servicio) =>
             servicio.category === "web" ? (
-              <Caja servicio={servicio} color="#8d99ae" colorTexto="#000" />
+              <Caja servicio={servicio} color="#3F88C5" colorTexto="#000" />
             ) : null
           )
         }
       </div>
       <h1
         class="py-10 text-xl uppercase md:text-2xl lg:text-4xl gradient-text2 font-bold"
+        id="diseno"
       >
         diseño
       </h1>
@@ -51,7 +54,7 @@ import { servicios } from "../data/servicios";
         {
           servicios.map((servicio) =>
             servicio.category === "diseno" ? (
-              <Caja servicio={servicio} color="#52796f" colorTexto="#fff" />
+              <Caja servicio={servicio} color="#916953" colorTexto="#000" />
             ) : null
           )
         }

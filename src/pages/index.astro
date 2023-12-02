@@ -36,16 +36,16 @@ import AboutUs from "../components/AboutUs.astro";
         servicios.map((servicio) =>
           servicio.isTopSales ? (
             servicio.category === "marketing" ? (
-              <a href="/servicios">
+              <a href="/servicios#marketing">
                 <Caja servicio={servicio} color="#dec998" colorTexto="black" />
               </a>
             ) : servicio.category === "web" ? (
-              <a href="/servicios">
-                <Caja servicio={servicio} color="#8d99ae" colorTexto="black" />
+              <a href="/servicios#web">
+                <Caja servicio={servicio} color="#3F88C5" colorTexto="black" />
               </a>
             ) : servicio.category === "diseno" ? (
-              <a href="/servicios">
-                <Caja servicio={servicio} color="#52796f" colorTexto="black" />
+              <a href="/servicios#diseno">
+                <Caja servicio={servicio} color="#916953" colorTexto="black" />
               </a>
             ) : null
           ) : null

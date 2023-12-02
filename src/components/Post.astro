@@ -14,6 +14,7 @@ const { post } = Astro.props;
       alt={post.data.title}
       loading="eager"
       format="webp"
+      transition:name={post.data.title}
     />
   </a>
   <div class="flex justify-between">
@@ -21,7 +22,9 @@ const { post } = Astro.props;
     <p>{post.data.author}</p>
   </div>
   <a href={`/blog/${post.slug}`}>
-    <h3 class="font-bold text-xl my-2">{post.data.title}</h3>
+    <h3 class="font-bold text-xl my-2">
+      {post.data.title}
+    </h3>
     <p class="text-base line-clamp-2">
       {post.body}
     </p>

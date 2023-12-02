@@ -22,7 +22,7 @@ export const servicios = [
     },
     
     {
-        name: "Diseño Web y Desarrollo Personalizado",
+        name: "Diseño Web y Desarrollo",
         description: "Diseñamos sitios web atractivos y funcionales para tus visitantes. Convierte clics en clientes.",
         category: "web",
         icon: '/icons/marketing.png',
@@ -51,7 +51,7 @@ export const servicios = [
         isTopSales: false
     },
     {
-        name: "RRSS",
+        name: "Redes Sociales",
         description: "Potencia tu presencia en redes sociales con nuestra gestión integral. Desde contenido a interacción, optimizamos tu visibilidad y participación en plataformas clave, impulsando tu marca digital.",
         category: "marketing",
         icon: '/icons/merch.png',
@@ -65,22 +65,8 @@ export const servicios = [
         isTopSales: false
     },
     {
-        name: "SEO",
-        description: "Eleva tu posición en motores de búsqueda con nuestra estrategia SEO. Optimizamos contenido y palabras clave para aumentar tu visibilidad orgánica, destacando en búsquedas locales o globales.",
-        category: "marketing",
-        icon: '/icons/web.png',
-        isTopSales: false
-    },
-    {
         name: "Consultoría Estratégica",
         description: "Desarrolla una visión eficiente para tu presencia en línea con nuestra consultoría. Analizamos mercado y competencia para maximizar resultados digitales, guiándote desde oportunidades hasta gestión de crisis.",
-        category: "marketing",
-        icon: '/icons/merch.png',
-        isTopSales: false
-    },
-    {
-        name: "Redacción de Campaña",
-        description: "Inicia tu campaña correctamente con nuestro servicio de redacción de briefs. Sumérgete en tu marca, objetivos y audiencia para crear un documento claro que guíe a tu equipo y colaboradores externos, asegurando alineación desde el principio.",
         category: "marketing",
         icon: '/icons/merch.png',
         isTopSales: false
