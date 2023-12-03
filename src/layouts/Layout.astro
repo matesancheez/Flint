@@ -40,15 +40,19 @@ import Footer from "../components/Footer.astro";
     <slot />
     <Footer />
     <script>
-      const t = document.getElementById("closeBtn"),
-        e = document.querySelector(".p-0"),
-        n = document.getElementById("openBtn");
-      t.addEventListener("click", () => {
-        e.classList.toggle("hidden");
-      }),
-        n.addEventListener("click", () => {
-          e.classList.remove("hidden");
+      document.addEventListener("astro:page-load", function () {
+        const closeBtn = document.getElementById("closeBtn");
+        const mobileMenu = document.querySelector(".p-0");
+        const openBtn = document.getElementById("openBtn");
+
+        closeBtn.addEventListener("click", () => {
+          mobileMenu.classList.toggle("hidden");
         });
+
+        openBtn.addEventListener("click", () => {
+          mobileMenu.classList.remove("hidden");
+        });
+      });
     </script>
 
     <style is:global>
