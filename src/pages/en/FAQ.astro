@@ -1,0 +1,50 @@
+---
+import Layout from "../../layouts/LayoutEn.astro";
+import questions from "../../data/en/FAQ.js";
+---
+
+<Layout title="Flint - FAQ">
+  <section class="mt-10">
+    <div class="mx-auto px-5">
+      <div class="flex flex-col items-center">
+        <h2 class="text-3xl font-bold mt-5 tracking-tight text-[#dec998]">
+          FAQ
+        </h2>
+        <p class="text-gray-200 text-2xl mt-3 text-center">
+          Preguntas frecuentes
+        </p>
+      </div>
+      <div class="grid divide-y divide-neutral-200 max-w-xl mx-auto mt-8">
+        {
+          questions.map((pregunta) => (
+            <div class="py-5">
+              <details class="group">
+                <summary class="flex justify-between items-center font-bold cursor-pointer list-none">
+                  <span> {pregunta.question}</span>
+                  <span class="transition group-open:rotate-180">
+                    <svg
+                      fill="none"
+                      height="24"
+                      shape-rendering="geometricPrecision"
+                      stroke="currentColor"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      stroke-width="1.5"
+                      viewBox="0 0 24 24"
+                      width="24"
+                    >
+                      <path d="M6 9l6 6 6-6" />
+                    </svg>
+                  </span>
+                </summary>
+                <p class=" text-[#dec998] mt-3 group-open:animate-fadeIn">
+                  {pregunta.answer}
+                </p>
+              </details>
+            </div>
+          ))
+        }
+      </div>
+    </div>
+  </section>
+</Layout>

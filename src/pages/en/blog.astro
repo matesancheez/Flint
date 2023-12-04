@@ -1,0 +1,12 @@
+---
+import Layout from "../../layouts/LayoutEn.astro";
+import { getCollection } from "astro:content";
+import PostList from "../../components/en/PostList.astro";
+const posts = await getCollection("postsEn");
+---
+
+<Layout title="Flint - Blog">
+  <section class="p-14">
+    <PostList posts={posts} />
+  </section>
+</Layout>
