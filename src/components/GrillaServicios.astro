@@ -1,0 +1,17 @@
+---
+import { bundles } from "../data/bundles.js";
+import Bundle from "./Bundle.astro";
+---
+
+<!--El arreglo debe tener la forma de: Nombre(texto) Features(lista) Platform (lista)-->
+<section class="relative">
+  <h1 class="text-2xl md:text-center md:text-5xl lg:p-24 lg:text-7xl p-8">
+    Paquetes de <b
+      class="text-3xl uppercase block md:text-6xl lg:text-8xl gradient-text font-extrabold"
+      >bundles</b
+    >
+  </h1>
+  <div class="grid p-5 md:grid-cols-2 lg:px-24 lg:grid-cols-4 gap-2">
+    {bundles.map((bundle) => <Bundle bundle={bundle} />)}
+  </div>
+</section>

@@ -1,0 +1,83 @@
+---
+import { Image } from "astro:assets";
+---
+
+<section class="w-[80%] mx-auto">
+  <div
+    class="lg:grid lg:grid-cols-4 rounded-lg bg-zinc-600/[80%] backdrop-blur-xl"
+  >
+    <!--Caja -->
+    <div class="p-8 border-b-2 lg:border-r-2 lg:border-b-0">
+      <div class="block xl:flex justify-between items-center">
+        <h1 class="text-3xl font-semibold pb-5">LAUNCH</h1>
+        <Image
+          width={100}
+          height={100}
+          class="mb-5 ms-4"
+          src="/icons/launch.png"
+          alt="flint launch bundle"
+          loading="eager"
+          format="webp"
+        />
+      </div>
+      <div>
+        <p class="test-xl">To bring life to your project.</p>
+      </div>
+    </div>
+
+    <!--Caja -->
+    <div class="p-8 border-b-2 lg:border-r-2 lg:border-b-0">
+      <div class="block xl:flex justify-between items-center">
+        <h1 class="text-3xl font-semibold pb-5">DETACH</h1>
+        <Image
+          width={100}
+          height={100}
+          class="mb-5 ms-4"
+          src="/icons/detach.png"
+          alt="flint launch bundle"
+          loading="eager"
+          format="webp"
+        />
+      </div>
+      <p>Expand your project into the digital world.</p>
+    </div>
+    <!--Caja -->
+    <div class="p-8 border-b-2 lg:border-r-2 lg:border-b-0">
+      <div class="block xl:flex justify-between items-center">
+        <h1 class="text-3xl font-semibold pb-5">DEPLOY</h1>
+        <Image
+          width={100}
+          height={100}
+          class="mb-5 ms-4"
+          src="/icons/deploy.png"
+          alt="flint launch bundle"
+          loading="eager"
+          format="webp"
+        />
+      </div>
+      <p class="test-xl">Empower your tailor-made personalized networks.</p>
+    </div>
+    <!--Caja -->
+    <div class="p-8">
+      <div class="block xl:flex justify-between items-center">
+        <h1 class="text-3xl font-semibold pb-5">BBC</h1>
+        <Image
+          width={100}
+          height={100}
+          class="mb-5 ms-4"
+          src="/icons/bbc.png"
+          alt="flint launch bundle"
+          loading="eager"
+          format="webp"
+        />
+      </div>
+      <p class="test-xl">
+        Get 4 Flint PRODUCTS and we'll give you a special price.
+      </p>
+    </div>
+  </div>
+
+  <div class="flex justify-end mt-3">
+    <a href="/en/servicios">See more &RightArrow;</a>
+  </div>
+</section>

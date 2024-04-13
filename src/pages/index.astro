@@ -1,50 +1,108 @@
 ---
-import BaseHead from '../components/BaseHead.astro';
-import Header from '../components/Header.astro';
-import Footer from '../components/Footer.astro';
-import { SITE_TITLE, SITE_DESCRIPTION } from '../consts';
+import Layout from "../layouts/Layout.astro";
+import Hero from "../components/Hero.astro";
+import Caja from "../components/Caja.astro";
+import { Image } from "astro:assets";
+import mascota1 from "../assets/mascota1.png";
+import { servicios } from "../data/servicios.js";
+import Crumble from "../components/Crumble.astro";
+import Tecnologias from "../components/Tecnologias.astro";
+import AboutUs from "../components/AboutUs.astro";
 ---
 
-<!doctype html>
-<html lang="en">
-	<head>
-		<BaseHead title={SITE_TITLE} description={SITE_DESCRIPTION} />
-	</head>
-	<body>
-		<Header />
-		<main>
-			<h1>🧑‍🚀 Hello, Astronaut!</h1>
-			<p>
-				Welcome to the official <a href="https://astro.build/">Astro</a> blog starter template. This
-				template serves as a lightweight, minimally-styled starting point for anyone looking to build
-				a personal website, blog, or portfolio with Astro.
-			</p>
-			<p>
-				This template comes with a few integrations already configured in your
-				<code>astro.config.mjs</code> file. You can customize your setup with
-				<a href="https://astro.build/integrations">Astro Integrations</a> to add tools like Tailwind,
-				React, or Vue to your project.
-			</p>
-			<p>Here are a few ideas on how to get started with the template:</p>
-			<ul>
-				<li>Edit this page in <code>src/pages/index.astro</code></li>
-				<li>Edit the site header items in <code>src/components/Header.astro</code></li>
-				<li>Add your name to the footer in <code>src/components/Footer.astro</code></li>
-				<li>Check out the included blog posts in <code>src/pages/blog/</code></li>
-				<li>Customize the blog post page layout in <code>src/layouts/BlogPost.astro</code></li>
-			</ul>
-			<p>
-				Have fun! If you get stuck, remember to <a href="https://docs.astro.build/"
-					>read the docs
-				</a> or <a href="https://astro.build/chat">join us on Discord</a> to ask questions.
-			</p>
-			<p>
-				Looking for a blog template with a bit more personality? Check out <a
-					href="https://github.com/Charca/astro-blog-template"
-					>astro-blog-template
-				</a> by <a href="https://twitter.com/Charca">Maxi Ferreira</a>.
-			</p>
-		</main>
-		<Footer />
-	</body>
-</html>
+<Layout title="Flint - Agencia de Marketing Digital">
+  <Hero />
+
+  <section class="relative mt-10">
+    <div class="p-8 flex justify-center">
+      <Image
+        width="1000"
+        height="1000"
+        loading="eager"
+        src={mascota1}
+        alt="mascota de flint"
+        class="hidden w-[300px] xl:w-[300px] h-[300px] xl:h-auto lg:inline"
+        format="webp"
+      />
+      <h1 class="text-2xl md:text-center md:text-5xl lg:p-24 lg:text-7xl">
+        Nuestra selección de<b
+          class="text-3xl uppercase block md:text-6xl lg:text-8xl gradient-text font-extrabold"
+          >servicios</b
+        >
+      </h1>
+    </div>
+    <div class="grid gap-5 grid-cols-2 md:grid-cols-3 w-[85%] m-auto">
+      {
+        servicios.map((servicio) =>
+          servicio.isTopSales ? (
+            servicio.category === "marketing" ? (
+              <a href="/servicios/#marketing">
+                <Caja servicio={servicio} color="#dec998" colorTexto="black" />
+              </a>
+            ) : servicio.category === "web" ? (
+              <a href="/servicios/#web">
+                <Caja servicio={servicio} color="#5E9CCF" colorTexto="black" />
+              </a>
+            ) : servicio.category === "diseno" ? (
+              <a href="/servicios/#diseno">
+                <Caja servicio={servicio} color="#B58C7D" colorTexto="black" />
+              </a>
+            ) : null
+          ) : null
+        )
+      }
+    </div>
+    <div class="flex justify-end w-[85%] m-auto mt-3">
+      <a href="/servicios#servicios">Ver mas &RightArrow;</a>
+    </div>
+  </section>
+
+  <section class="mt-10 z-0">
+    <div class="px-8 py-8 lg:py-0 text-end">
+      <h1 class="text-2xl md:text-5xl lg:text-7xl md:text-center lg:pt-24">
+        Estos <b
+          class="uppercase gradient-text font-extrabold text-3xl
+          md:text-6xl lg:text-8xl"
+          >bundles</b
+        >
+      </h1>
+      <h1 class="text-2xl md:text-5xl lg:text-7xl md:text-center">
+        le daran un
+      </h1>
+      <h1 class="md:text-center lg:pb-24 text-2xl md:text-5xl lg:text-7xl">
+        <b
+          class="uppercase gradient-text font-extrabold text-3xl
+        md:text-6xl lg:text-8xl"
+          >boost</b
+        > a tu marca
+      </h1>
+    </div>
+    <Crumble />
+  </section>
+
+  <section class="mt-10 lg:pt-24">
+    <AboutUs />
+  </section>
+
+  <section class="mt-10 lg:pt-24">
+    <div class="p-8 text-center">
+      <h1 class="text-2xl md:text-center lg:text-6xl pb-5">
+        Usamos las mejores <b
+          class="uppercase block gradient-text2 font-extraboldtext-3xl
+          md:text-6xl lg:text-8xl"
+          >Plataformas</b
+        >
+      </h1>
+      <h2
+        class="text-xl md:text-center lg:text-4xl gradient-text2 font-semibold"
+      >
+        Nuestras tecnologias favoritas
+      </h2>
+      <p class="lg:text-lg">
+        Estas son las tecnologias que mas nos gustan y usamos para darte los
+        mejores productos
+      </p>
+    </div>
+    <Tecnologias />
+  </section>
+</Layout>

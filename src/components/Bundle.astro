@@ -1,0 +1,292 @@
+---
+const bundle = Astro.props;
+---
+
+<div class="bg-[#1d1d1b] border rounded-lg border-[#dec998] pt-5">
+  <div class="text-white">
+    <div class="w-[100%] h-[100px] pt-5 text-center border-none">
+      <div>
+        <h1 class="font-extrabold text-2xl p-1">{bundle.bundle.nombre}</h1>
+        <p class="text-xs px-5">{bundle.bundle.descripcion}</p>
+      </div>
+    </div>
+    <div class="flex justify-center items-center py-5">
+      <a
+        href="/contacto"
+        class="bg-[#dec998] relative inline-flex items-center justify-center p-4 px-6 py-3 overflow-hidden font-medium text-[#1d1d1b] transition duration-300 ease-out border-2 border-[#dec998] rounded-full shadow-md group"
+      >
+        <span
+          class="absolute inset-0 flex items-center justify-center w-full h-full text-white duration-300 -translate-x-full bg-[#1d1d1b] group-hover:translate-x-0 ease"
+        >
+          <svg
+            class="w-6 h-6"
+            fill="none"
+            stroke="currentColor"
+            viewBox="0 0 24 24"
+            xmlns="http://www.w3.org/2000/svg"
+            ><path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="2"
+              d="M14 5l7 7m0 0l-7 7m7-7H3"></path></svg
+          >
+        </span>
+        <span
+          class="absolute flex items-center justify-center w-full h-full text-[#1d1d1b] transition-all duration-300 transform group-hover:translate-x-full ease"
+          >Contactanos</span
+        >
+        <span class="relative invisible">Contactanos</span>
+      </a>
+    </div>
+    <!--Ident corporativa -->
+    <div>
+      <h2 class="p-5 font-bold text-start text-lg">Bundles</h2>
+      <ul class="ms-7">
+        {
+          bundle.bundle.feature.map((platforms) => (
+            <li class="flex items-center">
+              <p class={platforms.incluido ? "hidden" : "inline text-red-500"}>
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  class="icon icon-tabler icon-tabler-x"
+                  width="24"
+                  height="24"
+                  viewBox="0 0 24 24"
+                  stroke-width="2"
+                  stroke="currentColor"
+                  fill="none"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                >
+                  <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                  <path d="M18 6l-12 12" />
+                  <path d="M6 6l12 12" />
+                </svg>
+              </p>
+              <p
+                class={platforms.incluido ? "inline text-green-500" : "hidden"}
+              >
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  class="icon icon-tabler icon-tabler-check"
+                  width="24"
+                  height="24"
+                  viewBox="0 0 24 24"
+                  stroke-width="2"
+                  stroke="currentColor"
+                  fill="none"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                >
+                  <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                  <path d="M5 12l5 5l10 -10" />
+                </svg>
+              </p>
+              {platforms.nombre}
+            </li>
+          ))
+        }
+      </ul>
+    </div>
+    <!--Web -->
+    <div>
+      <h2 class="p-5 font-bold text-start text-lg">Web</h2>
+      <ul class="ms-7 pb-5">
+        {
+          bundle.bundle.feature.map((feature) => (
+            <li class="flex items-center">
+              <p class={feature.incluido ? "hidden " : "inline text-red-500"}>
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  class="icon icon-tabler icon-tabler-x"
+                  width="24"
+                  height="24"
+                  viewBox="0 0 24 24"
+                  stroke-width="2"
+                  stroke="currentColor"
+                  fill="none"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                >
+                  <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                  <path d="M18 6l-12 12" />
+                  <path d="M6 6l12 12" />
+                </svg>
+              </p>
+              <p class={feature.incluido ? "inline text-green-500" : "hidden"}>
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  class="icon icon-tabler icon-tabler-check"
+                  width="24"
+                  height="24"
+                  viewBox="0 0 24 24"
+                  stroke-width="2"
+                  stroke="currentColor"
+                  fill="none"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                >
+                  <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                  <path d="M5 12l5 5l10 -10" />
+                </svg>
+              </p>
+              {feature.nombre}
+            </li>
+          ))
+        }
+      </ul>
+    </div>
+    <!--Redes -->
+    <div>
+      <h2 class="p-5 font-bold text-start text-lg">Web</h2>
+      <ul class="ms-7 pb-5">
+        {
+          bundle.bundle.feature.map((feature) => (
+            <li class="flex items-center">
+              <p class={feature.incluido ? "hidden " : "inline text-red-500"}>
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  class="icon icon-tabler icon-tabler-x"
+                  width="24"
+                  height="24"
+                  viewBox="0 0 24 24"
+                  stroke-width="2"
+                  stroke="currentColor"
+                  fill="none"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                >
+                  <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                  <path d="M18 6l-12 12" />
+                  <path d="M6 6l12 12" />
+                </svg>
+              </p>
+              <p class={feature.incluido ? "inline text-green-500" : "hidden"}>
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  class="icon icon-tabler icon-tabler-check"
+                  width="24"
+                  height="24"
+                  viewBox="0 0 24 24"
+                  stroke-width="2"
+                  stroke="currentColor"
+                  fill="none"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                >
+                  <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                  <path d="M5 12l5 5l10 -10" />
+                </svg>
+              </p>
+              {feature.nombre}
+            </li>
+          ))
+        }
+      </ul>
+    </div>
+    <!--Diseno -->
+    <div>
+      <h2 class="p-5 font-bold text-start text-lg">Web</h2>
+      <ul class="ms-7 pb-5">
+        {
+          bundle.bundle.feature.map((feature) => (
+            <li class="flex items-center">
+              <p class={feature.incluido ? "hidden " : "inline text-red-500"}>
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  class="icon icon-tabler icon-tabler-x"
+                  width="24"
+                  height="24"
+                  viewBox="0 0 24 24"
+                  stroke-width="2"
+                  stroke="currentColor"
+                  fill="none"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                >
+                  <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                  <path d="M18 6l-12 12" />
+                  <path d="M6 6l12 12" />
+                </svg>
+              </p>
+              <p class={feature.incluido ? "inline text-green-500" : "hidden"}>
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  class="icon icon-tabler icon-tabler-check"
+                  width="24"
+                  height="24"
+                  viewBox="0 0 24 24"
+                  stroke-width="2"
+                  stroke="currentColor"
+                  fill="none"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                >
+                  <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                  <path d="M5 12l5 5l10 -10" />
+                </svg>
+              </p>
+              {feature.nombre}
+            </li>
+          ))
+        }
+      </ul>
+    </div>
+    <!--Merchandise -->
+    <div>
+      <h2 class="p-5 font-bold text-start text-lg">Web</h2>
+      <ul class="ms-7 pb-5">
+        {
+          bundle.bundle.feature.map((feature) => (
+            <li class="flex items-center">
+              <p class={feature.incluido ? "hidden " : "inline text-red-500"}>
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  class="icon icon-tabler icon-tabler-x"
+                  width="24"
+                  height="24"
+                  viewBox="0 0 24 24"
+                  stroke-width="2"
+                  stroke="currentColor"
+                  fill="none"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                >
+                  <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                  <path d="M18 6l-12 12" />
+                  <path d="M6 6l12 12" />
+                </svg>
+              </p>
+              <p class={feature.incluido ? "inline text-green-500" : "hidden"}>
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  class="icon icon-tabler icon-tabler-check"
+                  width="24"
+                  height="24"
+                  viewBox="0 0 24 24"
+                  stroke-width="2"
+                  stroke="currentColor"
+                  fill="none"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                >
+                  <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                  <path d="M5 12l5 5l10 -10" />
+                </svg>
+              </p>
+              {feature.nombre}
+            </li>
+          ))
+        }
+      </ul>
+    </div>
+  </div>
+  <style>
+    li {
+      padding: 10px;
+      border-bottom: 1px solid #dec998;
+      width: 90%;
+      text-align: center;
+    }
+  </style>
+</div>

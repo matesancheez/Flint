@@ -1,0 +1,49 @@
+---
+import { Image } from "astro:assets";
+---
+
+<div>
+  <div class="p-8 mt-20 flex justify-center">
+    <h1 class="text-2xl md:text-center md:text-5xl lg:text-7xl uppercase">
+      ¿quienes somos? <!--<b
+        class="text-3xl uppercase block md:text-6xl lg:text-8xl gradient-text font-extrabold"
+        >flint</b>-->
+      <div class="flex justify-center">
+        <Image
+          class="md:mx-auto p-2 lg:w-64"
+          src="/FlintClaroSolo.avif"
+          alt="Logo de flint marketing agency"
+          width={100}
+          height={100}
+          format="webp"
+          quality="high"
+        />
+      </div>
+    </h1>
+  </div>
+  <div class="lg:px-36 px-12">
+    <div>
+      <div class="text-center">
+        <h1 class="py-5 text-2xl font-bold">
+          De la visión a la realidad: ¡Rápido y con estilo!
+        </h1>
+        <p>
+          En Flint, entendemos la importancia de poder plasmar tus grandes ideas
+          en el complejo y creciente mundo digital. Nos interesa, a través de
+          nuestros servicios, ayudarte a poner en palabras y llevar a acciones
+          concretas tus planes, ideas y proyectos. <b>Crecemos con vos</b>.
+        </p>
+      </div>
+      <div class="flex justify-center mt-10">
+        <a
+          href="about"
+          class="inline-flex items-center justify-center px-8 py-4 text-base
+                                    font-bold leading-6 text-black bg-[#dec998] ease-in duration-200 border border-transparent rounded-full
+                                    hover:bg-[#dec998]/50 focus:outline-none focus:ring-2 focus:ring-[#000] focus:ring-offset-2"
+        >
+          Conocenos
+        </a>
+      </div>
+    </div>
+  </div>
+</div>

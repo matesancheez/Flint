@@ -1,0 +1,89 @@
+---
+import { Image } from "astro:assets";
+import launch from "../assets/launch.png";
+import detach from "../assets/detach.png";
+import deploy from "../assets/deploy.png";
+import bbc from "../assets/bbc.png";
+---
+
+<section class="w-[85%] mx-auto">
+  <div
+    class="lg:grid lg:grid-cols-4 rounded-lg bg-zinc-600/[80%] backdrop-blur-xl"
+  >
+    <!--Caja -->
+    <div class="p-8 border-b-2 lg:border-r-2 lg:border-b-0">
+      <div class="block xl:flex justify-between items-center">
+        <h1 class="text-3xl font-semibold pb-5">LAUNCH</h1>
+        <Image
+          loading="eager"
+          width={100}
+          height={100}
+          class="mb-5 ms-4"
+          src={launch}
+          alt="flint launch bundle"
+          loading="eager"
+          format="webp"
+        />
+      </div>
+      <div>
+        <p class="test-xl">Para darle vida a tu proyecto.</p>
+      </div>
+    </div>
+
+    <!--Caja -->
+    <div class="p-8 border-b-2 lg:border-r-2 lg:border-b-0">
+      <div class="block xl:flex justify-between items-center">
+        <h1 class="text-3xl font-semibold pb-5">DETACH</h1>
+        <Image
+          loading="eager"
+          width={100}
+          height={100}
+          class="mb-5 ms-4"
+          src={detach}
+          alt="flint launch bundle"
+          loading="eager"
+          format="webp"
+        />
+      </div>
+      <p class="">Expandí tu proyecto al mundo digital.</p>
+    </div>
+    <!--Caja -->
+    <div class="p-8 border-b-2 lg:border-r-2 lg:border-b-0">
+      <div class="block xl:flex justify-between items-center">
+        <h1 class="text-3xl font-semibold pb-5">DEPLOY</h1>
+        <Image
+          loading="eager"
+          width={100}
+          height={100}
+          class="mb-5 ms-4"
+          src={deploy}
+          alt="flint launch bundle"
+          loading="eager"
+          format="webp"
+        />
+      </div>
+      <p class="test-xl">Potenciá tus redes personalizadas a medida</p>
+    </div>
+    <!--Caja -->
+    <div class="p-8">
+      <div class="block xl:flex justify-between items-center">
+        <h1 class="text-3xl font-semibold pb-5">BBC</h1>
+        <Image
+          loading="eager"
+          width={100}
+          height={100}
+          class="mb-5 ms-4"
+          src={bbc}
+          alt="flint launch bundle"
+          loading="eager"
+          format="webp"
+        />
+      </div>
+      <p class="test-xl">Llevá 4 PRODUCTOS Flint y te hacemos precio.</p>
+    </div>
+  </div>
+
+  <div class="flex justify-end mt-3">
+    <a href="/servicios">Ver mas &RightArrow;</a>
+  </div>
+</section>

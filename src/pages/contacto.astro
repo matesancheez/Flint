@@ -1,0 +1,108 @@
+---
+import Layout from "../layouts/Layout.astro";
+
+const subjects = [
+  "Meeting Agenda",
+  "Project Update",
+  "Action Items",
+  "New Hire Onboarding",
+  "Budget Review",
+  "Marketing Strategy",
+  "Quarterly Report",
+];
+---
+
+<Layout title="Flint - Ponte en contacto con nosotros">
+  <section class="bg-[#1d1d1b]">
+    <div class="py-8 lg:py-16 px-4 mx-auto max-w-screen-md">
+      <h2
+        class="mb-4 text-4xl tracking-tight font-extrabold text-center text-white"
+      >
+        Contactanos
+      </h2>
+      <p class="mb-8 lg:mb-16 font-light text-center text-gray-400 sm:text-xl">
+        ¿Tenes dudas? ¿Queres saber mas sobre nosotros? Dejanos un mensaje y te
+        responderemos a la brevedad.
+      </p>
+      <form
+        class="space-y-8"
+        autocomplete="off"
+        action="post"
+        netlify
+        name="contacto"
+      >
+        <div>
+          <label
+            for="email"
+            class="block mb-2 text-sm font-medium text-gray-300">Mail</label
+          >
+          <input
+            required
+            type="email"
+            name="email"
+            id="email"
+            class="shadow-sm border text-sm rounded-lg focus:ring-primary-500 focus:border-primary-500 block w-full p-2.5 bg-zinc-500 border-zinc-500 placeholder-gray-200/50 text-white focus:ring-primary-500 focus:border-primary-500 shadow-sm-light"
+            placeholder="nombre@mail.com"
+          />
+        </div>
+        <div>
+          <label for="name" class="block mb-2 text-sm font-medium text-gray-300"
+            >Nombre y Apellido</label
+          >
+          <input
+            type="text"
+            id="name"
+            name="name"
+            class="block p-3 w-full text-sm rounded-lg border shadow-sm focus:ring-primary-500 focus:border-primary-500 bg-zinc-500 border-zinc-500 placeholder-gray-200/50 text-white focus:ring-primary-500 focus:border-primary-500 shadow-sm-light"
+            placeholder="Jose Perez"
+            required
+          />
+        </div>
+        <div class="mb-5">
+          <label
+            for="subject"
+            class="block mb-2 text-sm font-medium text-gray-300"
+            >El objeto de tu consulta</label
+          >
+          <select
+            required
+            id="subject"
+            name="subject"
+            class="block p-3 w-full text-sm bg-zinc-500 border-zinc-500 placeholder-gray-200/50 rounded-lg border shadow-sm focus:ring-primary-500 focus:border-primary-500"
+          >
+            <option selected disabled class="text-gray-200"
+              >Selecciona una opcion</option
+            >
+            {
+              subjects.map((subject) => (
+                <option value={subject} class="text-gray-200">
+                  {subject}
+                </option>
+              ))
+            }
+          </select>
+        </div>
+
+        <div class="sm:col-span-2">
+          <label
+            for="message"
+            class="block mb-2 text-sm font-medium text-gray-200"
+            >Tu Mensaje</label
+          >
+          <textarea
+            required
+            name="message"
+            id="message"
+            rows="6"
+            class="block p-2.5 w-full text-sm rounded-lg shadow-sm border focus:ring-primary-500 focus:border-primary-500 bg-zinc-500 border-zinc-500 placeholder-gray-200/50 text-white focus:ring-primary-500 focus:border-primary-500"
+            placeholder="Contanos todas tus dudas..."></textarea>
+        </div>
+        <button
+          type="submit"
+          class="py-3 px-5 text-sm font-medium text-center text-white rounded-lg bg-primary-700 sm:w-fit hover:bg-primary-800 focus:ring-4 focus:outline-none bg-primary-600 hover:bg-primary-700 focus:ring-primary-800"
+          >Enviar mensaje</button
+        >
+      </form>
+    </div>
+  </section>
+</Layout>

@@ -1,0 +1,114 @@
+---
+const { title } = Astro.props;
+import { ViewTransitions } from "astro:transitions";
+import Navbar from "../components/Navbar.astro";
+import Footer from "../components/Footer.astro";
+---
+
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="robots" content="index, follow" />
+
+    <!--Metatags para compartir link -->
+    <meta
+      name="title"
+      property="og:title"
+      content="Flint Agencia de Marketing Digital"
+    />
+    <meta
+      name="description"
+      property="og:description"
+      content="Impulsa tu presencia en línea con nuestra agencia de marketing digital. Ofrecemos soluciones personalizadas que potencian tu marca, aumentan la visibilidad y generan resultados tangibles. Desde estrategias de SEO y gestión de redes sociales hasta campañas publicitarias efectivas, estamos aquí para llevarte al siguiente nivel digital. ¡Descubre cómo podemos hacer crecer tu negocio hoy!"
+    />
+    <meta name="image" property="og:image" content="/mascota_gris.webp" />
+    <meta property="og:image:type" content="image/webp" />
+    <meta name="theme-color" content="#1d1d1b" />
+    <meta name="generator" content={Astro.generator} />
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800;900&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800;900&display=swap"
+      rel="preload"
+      as="style"
+    />
+    <!--FavIcon -->
+    <link rel="icon" type="image/svg+xml" href="/flint-logo.png" />
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
+    <link rel="manifest" href="/site.webmanifest" />
+    <title>{title}</title>
+    <ViewTransitions />
+  </head>
+  <body>
+    <Navbar />
+    <slot />
+    <Footer />
+    <script>
+      document.addEventListener("astro:page-load", function () {
+        const closeBtn = document.getElementById("closeBtn");
+        const mobileMenu = document.querySelector(".p-0");
+        const openBtn = document.getElementById("openBtn");
+
+        closeBtn.addEventListener("click", () => {
+          mobileMenu.classList.toggle("hidden");
+        });
+
+        openBtn.addEventListener("click", () => {
+          mobileMenu.classList.remove("hidden");
+        });
+      });
+    </script>
+
+    <style is:global>
+      body {
+        margin: 0;
+        padding: 0;
+        theme-color: content= "#1d1d1b";
+        background: #1d1d1b;
+      }
+      html {
+        color-scheme: dark;
+        font-family: "Montserrat", sans-serif;
+        color: #fff;
+      }
+      .glass {
+        background: rgba(255, 255, 255, 0.38);
+        border-radius: 16px;
+        box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+        backdrop-filter: blur(7.6px);
+        -webkit-backdrop-filter: blur(7.6px);
+        border: 1px solid rgba(255, 255, 255, 0.3);
+      }
+      .gradient-text {
+        background-image: linear-gradient(to top left, #586f7c, #dec998);
+        -webkit-background-clip: text;
+        background-clip: text;
+        color: transparent;
+      }
+      .gradient-text2 {
+        background-image: linear-gradient(to top, #f2af50, #50b4f2);
+        -webkit-background-clip: text;
+        background-clip: text;
+        color: transparent;
+      }
+      .gradient-bg {
+        background: rgb(49, 45, 49);
+        background: linear-gradient(
+          149deg,
+          rgba(49, 45, 49, 1) 0%,
+          rgba(88, 111, 124, 1) 100%
+        );
+      }
+    </style>
+  </body>
+</html>

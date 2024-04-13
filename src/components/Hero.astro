@@ -1,0 +1,96 @@
+---
+import { Image } from "astro:assets";
+import mascota from "../assets/mascota.png";
+import nube from "../assets/cloud.png";
+---
+
+<section class="bg-black h-[60vh] md:h-[100vh] flex">
+  <div
+    class="grid max-w-screen-xl px-4 py-8 mx-auto lg:gap-8 xl:gap-0 lg:py-16 lg:grid-cols-12"
+  >
+    <div class="mr-auto place-self-center lg:col-span-6">
+      <h1
+        class="max-w-2xl mb-4 text-4xl font-extrabold tracking-tight leading-none md:text-5xl xl:text-6xl text-white"
+      >
+        <b class="text-[#dec998]">Flint</b> Agencia de Marketing Digital
+      </h1>
+      <p
+        class="max-w-2xl mb-6 font-light lg:mb-8 md:text-lg lg:text-xl text-gray-400"
+      >
+        Socios en el Éxito Digital. Estrategias innovadoras. Resultados
+        medibles.
+      </p>
+      <a
+        href="/about"
+        class="inline-flex items-center justify-center px-5 py-3 mr-3 text-base font-medium text-center text-white rounded-lg bg-primary-700 hover:bg-primary-800 focus:ring-4 focus:ring-primary-300 focus:ring-primary-900"
+      >
+        Mas sobre Flint &rarr;
+      </a>
+      <a
+        href="/contacto"
+        class="inline-flex items-center justify-center px-5 py-3 text-base font-medium text-center border rounded-lg focus:ring-4 text-white border-gray-700 hover:bg-gray-700 focus:ring-gray-800"
+      >
+        Contactanos
+      </a>
+    </div>
+    <div class="hidden lg:mt-0 lg:col-span-6 lg:flex justify-end items-center">
+      <div class="flex items-center">
+        <Image
+          loading="eager"
+          src={mascota}
+          alt="mockup"
+          width="1000"
+          height="1000"
+          class="h-[400px] xl:h-[500px] w-auto z-30"
+          format="webp"
+          quality="high"
+        />
+        <div class="absolute top-10 z-0">
+          <Image
+            loading="eager"
+            src={nube}
+            alt="mockup"
+            width="1000"
+            height="577"
+            class="w-[300px] h-[150px] xl:w-[350px] xl:h-[200px] relative right-10 top-[35dvh] xl:top-[40dvh] flota"
+            format="webp"
+            quality="high"
+          />
+          <Image
+            loading="eager"
+            src={nube}
+            alt="mockup"
+            width="1000"
+            height="577"
+            class="hidden w-[350px] h-[160px] relative left-[13dvw] top-[30dvh] xl:inline flota2"
+            format="webp"
+            quality="high"
+          />
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<style>
+  .flota {
+    transform: translatey(0px);
+    animation: float 6s ease-in-out infinite;
+  }
+
+  .flota2 {
+    transform: translatey(0px);
+    animation: float 4s ease-in-out infinite;
+  }
+
+  @keyframes float {
+    0% {
+      transform: translatey(0px);
+    }
+    50% {
+      transform: translatey(-12px);
+    }
+    100% {
+      transform: translatey(0px);
+    }
+  }
+</style>

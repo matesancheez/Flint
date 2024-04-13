@@ -1,0 +1,188 @@
+---
+import { Image } from "astro:assets";
+import mascota1 from "../../assets/mascota1.png";
+import mascota from "../../assets/mascota.png";
+import Layout from "../../layouts/LayoutEn.astro";
+---
+
+<Layout title="Flint - About Us">
+  <div class="p-10">
+    <div>
+      <div>
+        <h1 class="text-3xl lg:text-6xl font-bold">About Us</h1>
+        <!--primera caja -->
+        <div class="mx-auto lg:flex items-center">
+          <div>
+            <p class="text-xl lg:text-2xl w-[90%] mt-10 text-end md:text-start">
+              At Flint, we embrace the dedication and ingenuity of the ovenbird
+              when constructing its nest to create exceptional digital
+              campaigns. Just as the ovenbird selects each material with
+              precision, we choose specific strategies for each client, ensuring
+              that each element contributes to the overall success of the
+              campaign.
+            </p>
+            <p class="text-xl lg:text-2xl w-[90%] mt-5">
+              Just as the ovenbird immerses itself in its task with passion, in
+              our agency, we wholeheartedly dedicate ourselves to each project.
+              Each return flight to the ovenbird's nest is like our constant
+              reviews and adjustments, always seeking to improve and perfect
+              every detail.
+            </p>
+          </div>
+
+          <div>
+            <Image
+              width="1000"
+              height="1000"
+              loading="eager"
+              src={mascota1}
+              alt="mascota de flint"
+              class="hidden w-[800px] lg:inline"
+              format="webp"
+            />
+          </div>
+        </div>
+        <!--Segunda caja -->
+        <div class="mx-auto lg:flex items-center flex-row-reverse mt-5">
+          <div>
+            <p
+              class="text-xl lg:text-2xl w-[90%] mt-10 text-end md:text-start lg:text-end"
+            >
+              At Flint, we embrace the dedication and ingenuity of the ovenbird
+              when constructing its nest to create exceptional digital
+              campaigns. Just as the ovenbird selects each material with
+              precision, we choose specific strategies for each client, ensuring
+              that each element contributes to the overall success of the
+              campaign.
+            </p>
+          </div>
+          <div>
+            <Image
+              width="1000"
+              height="1000"
+              loading="eager"
+              src={mascota}
+              alt="mascota de flint"
+              class="hidden w-[1000px] lg:inline"
+              format="webp"
+            />
+          </div>
+        </div>
+      </div>
+      <!--Seccion de  mision y vision -->
+      <div class="mt-32">
+        <div class="flex justify-center py-10">
+          <div class="">
+            <h2 class="text-3xl font-bold">Mision</h2>
+            <p class="text-2xl pt-7">
+              Providing the Argentine market with a <b>transparent</b> offer model
+              for a digital marketing agency that prioritizes the client relationship,
+              actively integrating them into the working team.
+            </p>
+            <p class="text-2xl">
+              Our mission is to offer our services in the most transparent way,
+              connecting with each client in a <b>unique and personalized</b>
+              manner.
+            </p>
+          </div>
+        </div>
+
+        <div class="flex justify-center py-10">
+          <div class="">
+            <h2 class="text-3xl font-bold">Vision</h2>
+            <p class="text-2xl pt-7">
+              To turn Flint into a <b>TOP</b> agency in the global market, bringing
+              the differentiators of <b>Argentinian</b> culture worldwide, composed
+              of a team with international reputation.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!--Seccion de personas -->
+    <div class="mt-28">
+      <h2 class="text-6xl font-bold text-center">Our Team</h2>
+      <!--Primera Persona -->
+      <div class="mt-10">
+        <div
+          class="mx-auto p-8 lg:flex items-center justify-between bg-black w-[80vw]"
+        >
+          <div class="flex justify-center lg:hidden">
+            <Image
+              width="1000"
+              height="1000"
+              loading="eager"
+              src={mascota1}
+              alt="mascota de flint"
+              class="w-[200px]"
+              format="webp"
+            />
+          </div>
+
+          <!-- Información de la Persona (3/4 del ancho) -->
+          <div class="text-center lg:text-start">
+            <h1 class="text-4xl font-bold mb-4">Nicolas Dousset</h1>
+            <p class="text-lg mb-4">Data</p>
+            <p>
+              A brief description about the person. You can add more details
+              here.
+            </p>
+          </div>
+
+          <!-- Imagen de la Persona (1/4 del ancho) -->
+          <div class="flex justify-center">
+            <Image
+              width="1000"
+              height="1000"
+              loading="eager"
+              src={mascota1}
+              alt="mascota de flint"
+              class="hidden w-[300px] lg:inline"
+              format="webp"
+            />
+          </div>
+        </div>
+      </div>
+      <!--Segunda Persona -->
+      <div class="mt-10">
+        <div
+          class="mx-auto p-8 lg:flex items-center justify-between bg-black flex-row-reverse w-[80vw]"
+        >
+          <div class="flex justify-center lg:hidden">
+            <Image
+              width="1000"
+              height="1000"
+              loading="eager"
+              src={mascota1}
+              alt="mascota de flint"
+              class="w-[200px]"
+              format="webp"
+            />
+          </div>
+
+          <div class="text-center lg:text-start lg:w-[80%]">
+            <h1 class="text-4xl font-bold mb-4">Julian Gonzalez</h1>
+            <p class="text-lg mb-4">Data</p>
+            <p>
+              A brief description about the person. You can add more details
+              here.
+            </p>
+          </div>
+
+          <div class="flex justify-center">
+            <Image
+              width="1000"
+              height="1000"
+              loading="eager"
+              src={mascota1}
+              alt="mascota de flint"
+              class="hidden w-[300px] lg:inline"
+              format="webp"
+            />
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</Layout>

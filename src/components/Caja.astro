@@ -1,0 +1,36 @@
+---
+const servicio = Astro.props;
+const { color, colorTexto } = Astro.props;
+import { Image } from "astro:assets";
+---
+
+<div
+  style={{ backgroundColor: `${color}`, color: `${colorTexto}` }}
+  class="z-10 flex items-center justify-center md:items-start p-5 opacity-100 rounded-xl w-full h-[200px] md:h-[400px] lg:h-[300px] xl:h-[230px] text-center md:text-left ease-in duration-200 backdrop-blur-md hover:opacity-80"
+>
+  <div>
+    <div class="flex justify-center md:justify-between items-center pb-3">
+      <h1 class="font-bold text-lg lg:text-xl md:block hidden">
+        {servicio.servicio.name}
+      </h1>
+      <Image
+        class="w-[50px] h-[50px]"
+        loading="eager"
+        src={servicio.servicio.icon}
+        alt={servicio.servicio.name}
+        width="50"
+        height="50"
+        format="webp"
+        quality="high"
+      />
+    </div>
+    <div>
+      <h1 class="font-semibold text-sm lg:text-xl block md:hidden">
+        {servicio.servicio.name}
+      </h1>
+      <p class="hidden md:block text-md">
+        {servicio.servicio.description}
+      </p>
+    </div>
+  </div>
+</div>

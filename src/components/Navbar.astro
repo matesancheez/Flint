@@ -1,0 +1,157 @@
+---
+import { Image } from "astro:assets";
+---
+
+<header
+  class="bg-zinc-900 inset-x-0 top-0 z-50 sticky top lg:m-auto lg:bg-zinc-500/[20%] lg:backdrop-blur-xl py-3"
+>
+  <nav
+    class="flex items-center justify-between p-2 lg:px-8"
+    aria-label="Global"
+  >
+    <div class="flex lg:flex-1">
+      <a href="/" class="-m-1.5 p-1.5">
+        <span class="sr-only">Flint - Marketing Agency</span>
+        <Image
+          loading="eager"
+          width="16"
+          height="16"
+          class="w-16 h-auto"
+          src="/FlintClaroSolo.avif"
+          alt="logo de flint marketing agency"
+          format="webp"
+          quality="high"
+        />
+      </a>
+    </div>
+    <div class="flex lg:hidden">
+      <button
+        type="button"
+        class="-m-2.5 inline-flex items-center justify-center rounded-md p-2.5 text-gray-700"
+        id="openBtn"
+      >
+        <span class="sr-only">Open main menu</span>
+        <svg
+          class="h-6 w-6"
+          fill="none"
+          viewBox="0 0 24 24"
+          stroke-width="1.5"
+          stroke="currentColor"
+          aria-hidden="true"
+        >
+          <path
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5"></path>
+        </svg>
+      </button>
+    </div>
+    <div class="hidden lg:flex lg:gap-x-12">
+      <a href="/servicios" class="text-sm font-semibold leading-6 text-gray-100"
+        >Servicios</a
+      >
+      <a href="/about" class="text-sm font-semibold leading-6 text-gray-100"
+        >Nosotros</a
+      >
+      <a href="/blog" class="text-sm font-semibold leading-6 text-gray-100"
+        >Blog</a
+      >
+      <a href="/FAQ" class="text-sm font-semibold leading-6 text-gray-100"
+        >FAQ</a
+      >
+    </div>
+    <div class="hidden lg:flex lg:flex-1 lg:justify-end gap-8">
+      <a href="/en/" class="text-sm font-semibold leading-6 text-gray-100">
+        Change lenguage to English 🇺🇸</a
+      >
+      <a href="/contacto" class="text-sm font-semibold leading-6 text-gray-100"
+        >Contactanos <span aria-hidden="true">&rarr;</span></a
+      >
+    </div>
+  </nav>
+  <div class="lg:hidden hidden p-0" role="dialog" aria-modal="true">
+    <div class="fixed inset-0 z-50"></div>
+    <div
+      class="fixed inset-y-0 right-0 z-50 w-full overflow-y-auto bg-zinc-900 px-6 py-6 sm:max-w-sm sm:ring-1 sm:ring-gray-900/10"
+    >
+      <div class="flex items-center justify-between">
+        <a href="/" class="-m-1.5 p-1.5">
+          <span class="sr-only">Flint</span>
+          <Image
+            width="244"
+            height="100"
+            class="w-16 h-auto mt-2"
+            src="/FlintClaroSolo.avif"
+            alt="Flint marketing agency logo"
+            format="webp"
+            quality="high"
+          />
+        </a>
+        <button
+          type="button"
+          class="-m-2.5 rounded-md p-2.5 text-gray-700"
+          id="closeBtn"
+        >
+          <span class="sr-only">Close menu</span>
+          <svg
+            class="h-6 w-6"
+            fill="none"
+            viewBox="0 0 24 24"
+            stroke-width="1.5"
+            stroke="currentColor"
+            aria-hidden="true"
+          >
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              d="M6 18L18 6M6 6l12 12"></path>
+          </svg>
+        </button>
+      </div>
+      <div class="mt-6 flow-root">
+        <div class="-my-6 divide-y divide-gray-500/10">
+          <div class="space-y-2 py-6">
+            <a
+              href="/"
+              class="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-white hover:bg-gray-700"
+              >Home</a
+            >
+            <a
+              href="/servicios"
+              class="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-white hover:bg-gray-700"
+              >Servicios</a
+            >
+            <a
+              href="/about"
+              class="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-white hover:bg-gray-700"
+              >Nosotros</a
+            >
+            <a
+              href="/blog"
+              class="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-white hover:bg-gray-700"
+              >Blog</a
+            >
+            <a
+              href="/FAQ"
+              class="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-white hover:bg-gray-700"
+              >FAQ</a
+            >
+          </div>
+          <div class="py-6">
+            <a
+              href="/contacto"
+              class="-mx-3 block rounded-lg px-3 py-2.5 text-base font-semibold leading-7 text-white hover:bg-gray-700"
+              >Contactanos</a
+            >
+
+            <a
+              href="/en/"
+              class="-mx-3 block rounded-lg px-3 py-2.5 text-base font-semibold leading-7 text-white hover:bg-gray-700"
+              >Change lenguage to English 🇺🇸</a
+            >
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</header>

@@ -1,0 +1,64 @@
+---
+import Layout from "../../layouts/LayoutEn.astro";
+import Caja from "../../components/Caja.astro";
+import Grilla from "../../components/en/GrillaServiciosEn.astro";
+
+import { servicios } from "../../data/en/servicios";
+---
+
+<Layout title="Flint - Services">
+  <Grilla />
+  <section class="w-[85%] m-auto mt-10" id="services">
+    <h1 class="text-2xl md:text-center md:text-5xl lg:p-24 lg:text-7xl">
+      Service <b
+        class="text-3xl uppercase block md:text-6xl lg:text-8xl gradient-text font-extrabold"
+        >Packages</b
+      >
+      <h1
+        class="py-10 text-2xl uppercase md:text-3xl lg:text-5xl gradient-text2 font-extrabold"
+        id="marketing"
+      >
+        Marketing
+      </h1>
+      <div class="grid grid-cols-2 md:grid-cols-3 gap-5">
+        {
+          servicios.map((servicio) =>
+            servicio.category === "marketing" ? (
+              <Caja servicio={servicio} color="#dec998" colorTexto="#000" />
+            ) : null
+          )
+        }
+      </div>
+      <h1
+        class="py-10 text-2xl uppercase md:text-3xl lg:text-5xl gradient-text2 font-extrabold"
+        id="web"
+      >
+        Web
+      </h1>
+      <div class="grid grid-cols-2 md:grid-cols-3 gap-5">
+        {
+          servicios.map((servicio) =>
+            servicio.category === "web" ? (
+              <Caja servicio={servicio} color="#3F88C5" colorTexto="#fff" />
+            ) : null
+          )
+        }
+      </div>
+      <h1
+        class="py-10 text-2xl uppercase md:text-3xl lg:text-5xl gradient-text2 font-extrabold"
+        id="diseno"
+      >
+        design
+      </h1>
+      <div class="grid grid-cols-2 md:grid-cols-3 gap-5">
+        {
+          servicios.map((servicio) =>
+            servicio.category === "design" ? (
+              <Caja servicio={servicio} color="#916953" colorTexto="#fff" />
+            ) : null
+          )
+        }
+      </div>
+    </h1>
+  </section>
+</Layout>

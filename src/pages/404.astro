@@ -1,0 +1,32 @@
+---
+import { Image } from "astro:assets";
+import mascota from "../assets/404.png";
+import Layout from "../layouts/Layout.astro";
+---
+
+<Layout title="Flint - Error 404!">
+  <div class="mt-auto">
+    <div class="text-center p-10 block">
+      <p class="text-3xl md:text-7xl font-extrabold">Error</p>
+    </div>
+    <div class="flex justify-center py-10 md:p-0">
+      <Image
+        loading="eager"
+        src={mascota}
+        width={1000}
+        height={1000}
+        alt="mockup"
+        class="w-[300px] h-auto md:w-[600px]"
+        format="webp"
+        quality="high"
+      />
+    </div>
+    <div class="text-center">
+      <p class="text-3xl md:text-7xl font-extrabold">404</p>
+      <p class="text-xl md:text-3xl">pagina no encontrada!</p>
+    </div>
+    <div class="flex justify-center mt-3 text-md md:text-xl">
+      <a href="/"> &LeftArrow; Volver a Home </a>
+    </div>
+  </div>
+</Layout>

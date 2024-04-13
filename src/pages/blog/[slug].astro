@@ -1,0 +1,71 @@
+---
+import { getCollection } from "astro:content";
+import { Image } from "astro:assets";
+import Layout from "../../layouts/Layout.astro";
+
+export const getStaticPaths = async () => {
+  const posts = await getCollection("posts");
+
+  const path = posts.map((post) => {
+    return {
+      params: { slug: post.slug },
+      props: { post },
+    };
+  });
+
+  return path;
+};
+
+const { post } = Astro.props;
+const { Content } = await post.render();
+---
+
+<Layout title={"Flint - " + post.data.title}>
+  <section class="px-14 lg:px-64">
+    <h1 class="mb-10 text-xl lg:text-5xl font-bold mt-14">
+      {post.data.title}
+    </h1>
+
+    <Image
+      width="1024"
+      height="256"
+      class="rounded-lg"
+      src={post.data.image}
+      alt={post.data.title}
+      loading="eager"
+      format="webp"
+      transition:name={post.data.title}
+    />
+
+    <section>
+      <div class="font-light text-gray-600">
+        <a href="#" class="flex items-center mt-6 mb-6">
+          <Image
+            width="60"
+            height="60"
+            class="hidden object-cover w-14 h-14 mx-4 rounded-full sm:block"
+            src={post.data.authorimg}
+            alt={post.data.author}
+            loading="eager"
+            format="webp"
+          />
+          <h1 class="font-bold text-gray-400 hover:underline">
+            {post.data.author}
+          </h1>
+        </a>
+      </div>
+      <div>
+        <p
+          class="bg-green-700 rounded-full px-2 py-1 text-sm md:text-lg md:px-5 md:py-2 w-fit text-center"
+        >
+          {post.data.categories}
+        </p>
+      </div>
+    </section>
+    <div
+      class="mt-10 prose-sm mb-20 text-white prose-headings:text-white prose-headings:font-bold prose-headings:py-5 md:prose-xl"
+    >
+      <Content />
+    </div>
+  </section>
+</Layout>
