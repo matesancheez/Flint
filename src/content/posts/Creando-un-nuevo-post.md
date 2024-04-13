@@ -1,6 +1,6 @@
 ---
 author: Mateo
-authorimg: /images/autores/dwight.avif
+authorimg: public/images/autores/dwight.avif
 categories:
   - insights
 date: 2024-04-13T03:00:00.000Z
