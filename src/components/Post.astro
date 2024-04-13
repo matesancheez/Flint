@@ -1,6 +1,26 @@
 ---
 import { Image } from "astro:assets";
 const { post } = Astro.props;
+
+function FechaFormateada(fechaString) {
+        // Fecha proporcionada
+        var fecha = new Date(fechaString);
+
+        // Función para obtener el día con dos dígitos
+        function obtenerDiaConCeros(dia) {
+          return (dia < 10 ? '0' : '') + dia;
+        }
+
+        // Obtener día, mes y año
+        var dia = obtenerDiaConCeros(fecha.getDate());
+        var mes = obtenerDiaConCeros(fecha.getMonth() + 1); // Los meses van de 0 a 11
+        var year = fecha.getFullYear();
+
+        // Retornar la fecha formateada
+        return dia + '/' + mes + '/' + year;
+      }
+
+let fecha = FechaFormateada(post.data.date)
 ---
 
 <article class="overflow-hidden">
@@ -17,7 +37,7 @@ const { post } = Astro.props;
     />
   </a>
   <div class="flex justify-between">
-    <p class="p-1 text-gray-300">{post.data.date}</p>
+    <p class="p-1 text-gray-300">{fecha}</p>
     <p>{post.data.author}</p>
   </div>
   <a href={`/blog/${post.slug}`}>

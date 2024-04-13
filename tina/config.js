@@ -8,7 +8,7 @@ const branch =
   "main";
 
 export default defineConfig({
-  branch: "main",
+  branch,
 
   // Get this from tina.io
   clientId: process.env.NEXT_PUBLIC_TINA_CLIENT_ID,
@@ -85,7 +85,6 @@ export default defineConfig({
             type: "boolean",
             name: "featured",
             label: "Featured",
-            required: true
           },
           {
             type: "string",
@@ -159,7 +158,6 @@ export default defineConfig({
             type: "boolean",
             name: "featured",
             label: "Featured",
-            required: true
           },
           {
             type: "string",
