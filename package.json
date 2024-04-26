@@ -1,7 +1,7 @@
 {
-  "name": "blog_2",
+  "name": "flint",
   "type": "module",
-  "version": "0.0.1",
+  "version": "2.0",
   "scripts": {
     "dev": "tinacms dev -c \"astro dev\"",
     "start": "astro dev",

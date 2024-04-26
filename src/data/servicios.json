@@ -1,0 +1,102 @@
+[
+    {
+        "name": "SEO",
+        "description": "Aumentamos tu visibilidad en los motores de búsqueda para que tu audiencia te encuentre fácilmente. ¡Posicioná tu marca en lo más alto de las SERP’s!",
+        "category": "marketing",
+        "icon": "/icons/seo.webp",
+        "isTopSales": true
+    },
+    {
+        "name": "Gestión de Redes Sociales",
+        "description": "Creamos estrategias para redes impactantes para construir una comunidad leal alrededor de tu marca. ¡Convierte seguidores en clientes!",
+        "category": "marketing",
+        "icon": "/icons/redes.webp",
+        "isTopSales": true
+    },
+    {
+        "name": "Diseño Gráfico Creativo",
+        "description": "Desde logotipos hasta material promocional, creamos piezas de diseño a medida. Fortalece la identidad de tu marca.",
+        "category": "diseno",
+        "icon": "/icons/sketch.webp",
+        "isTopSales": false
+    },
+    
+    {
+        "name": "Diseño Web y Desarrollo",
+        "description": "Diseñamos sitios web atractivos y funcionales para tus visitantes. Convierte clics en clientes.",
+        "category": "web",
+        "icon": "/icons/web.webp",
+        "isTopSales": true
+    },
+    {
+        "name": "Campañas Publicitarias Eficientes (SEM)",
+        "description": "Gestión de campañas publicitarias  en Google Ads. Asegurate que tu mensaje llegue a quienes más importan.",
+        "category": "marketing",
+        "icon": "/icons/marketing.webp",
+        "isTopSales": false
+    },
+    
+    {
+        "name": "Consultoría Estratégica",
+        "description": "Desarrollamos soluciones estratégicas a medida para hacer crecer tu empresa . Destaca con tu marca en el mercado competitivo.",
+        "category": "marketing",
+        "icon": "/icons/marketing.webp",
+        "isTopSales": true
+    },
+    {
+        "name": "Redacción de Campaña Publicitaria",
+        "description": "We'll partner with affiliates to promote your products and earn commissions on sales.",
+        "category": "marketing",
+        "icon": "/icons/marketing.webp",
+        "isTopSales": false
+    },
+    {
+        "name": "Redes Sociales",
+        "description": "Potencia tu presencia en redes sociales con nuestra gestión integral. Desde contenido a interacción, optimizamos tu visibilidad y participación en plataformas clave, impulsando tu marca digital.",
+        "category": "marketing",
+        "icon": "/icons/redes.webp",
+        "isTopSales": false
+    },
+    {
+        "name": "Publicidad en Línea",
+        "description": "Alcanza tu audiencia de manera efectiva con campañas publicitarias personalizadas. Desde Google hasta redes sociales, maximizamos tu retorno de inversión, aumentando tu visibilidad y conversión.",
+        "category": "marketing",
+        "icon": "/icons/web.webp",
+        "isTopSales": false
+    },
+    {
+        "name": "Consultoría Estratégica",
+        "description": "Desarrolla una visión eficiente para tu presencia en línea con nuestra consultoría. Analizamos mercado y competencia para maximizar resultados digitales, guiándote desde oportunidades hasta gestión de crisis.",
+        "category": "marketing",
+        "icon": "/icons/sketch.webp",
+        "isTopSales": false
+    },
+    {
+        "name": "Diseño de producto",
+        "description": "Merchandising; Packaging: Potenciamos tu marca con diseño de producto de calidad. Desde merchandising hasta packaging, creamos soluciones visuales atractivas que destacan en el mercado.",
+        "category": "diseno",
+        "icon": "/icons/sketch.webp",
+        "isTopSales": true
+    },
+    {
+        "name": "Editorial",
+        "description": " Piezas: Dale vida a tus ideas con nuestro diseño editorial. Desde piezas gráficas hasta diseños complejos, damos forma a tu contenido para que destaque y se comunique de manera efectiva.",
+        "category": "diseno",
+        "icon": "/icons/pencil.webp",
+        "isTopSales": false
+    },
+    {
+        "name": "Identidad Corporativa",
+        "description": "Crea una identidad única con nuestro servicio de diseño corporativo. Desarrollamos logotipos y elementos visuales que reflejan la esencia de tu marca, asegurando coherencia y reconocimiento.",
+        "category": "diseno",
+        "icon": "/icons/identidad.webp",
+        "isTopSales": false
+    },
+    {
+        "name": "Papelería y publicidad",
+        "description": "Impulsa tu presencia con nuestra creatividad en papelería y publicidad. Desde tarjetas de presentación hasta campañas publicitarias, diseñamos material impactante que deja una impresión duradera.",
+        "category": "diseno",
+        "icon": "/icons/paper.webp",
+        "isTopSales": true
+    }
+]
