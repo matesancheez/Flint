@@ -59,13 +59,15 @@ import Footer from "../components/en/FooterEn.astro";
         const mobileMenu = document.querySelector(".p-0");
         const openBtn = document.getElementById("openBtn");
         
-        closeBtn.addEventListener("click", () => {
+        if(closeBtn !== null && mobileMenu !== null && openBtn !== null){
+          closeBtn.addEventListener("click", () => {
           mobileMenu.classList.toggle("hidden");
         });
 
         openBtn.addEventListener("click", () => {
           mobileMenu.classList.remove("hidden");
         });
+        }
       });
     </script>
 

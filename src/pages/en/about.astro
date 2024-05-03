@@ -103,51 +103,53 @@ import Layout from "../../layouts/LayoutEn.astro";
     <!--Seccion de personas -->
     <div class="mt-28">
       <h2 class="text-6xl font-bold text-center">Our Team</h2>
-      <!--Primera Persona -->
-      <div class="mt-10">
-        <div
-          class="mx-auto p-8 lg:flex items-center justify-between bg-black w-[80vw]"
-        >
-          <div class="flex justify-center lg:hidden">
-            <Image
-              width="1000"
-              height="1000"
-              loading="eager"
-              src={mascota1}
-              alt="mascota de flint"
-              class="w-[200px]"
-              format="webp"
-            />
-          </div>
+      <div class="container">
+      <div class="md:flex block">
+          <!--Primera Persona -->
+          <div class="mt-10 p-3">
+            <div
+              class="mx-auto p-8 lg:flex items-center justify-between bg-black md:h-[500px] lg:h-[300px] xl:h-[200px]"
+            >
+              <div class="flex justify-center lg:hidden">
+                <Image
+                  width="1000"
+                  height="1000"
+                  loading="eager"
+                  src={mascota1}
+                  alt="mascota de flint"
+                  class="w-[200px]"
+                  format="webp"
+                />
+              </div>
 
-          <!-- Información de la Persona (3/4 del ancho) -->
-          <div class="text-center lg:text-start">
-            <h1 class="text-4xl font-bold mb-4">Nicolas Dousset</h1>
-            <p class="text-lg mb-4">Data</p>
-            <p>
-              A brief description about the person. You can add more details
-              here.
-            </p>
-          </div>
+              <!-- Información de la Persona (3/4 del ancho) -->
+              <div class="text-center lg:text-start">
+                <h1 class="text-4xl font-bold mb-4">Nicolas Dousset</h1>
+                <p class="text-lg mb-4">Data</p>
+                <p>
+                  A brief description about the person. You can add more details
+                  here.
+                </p>
+              </div>
 
-          <!-- Imagen de la Persona (1/4 del ancho) -->
-          <div class="flex justify-center">
-            <Image
-              width="1000"
-              height="1000"
-              loading="eager"
-              src={mascota1}
-              alt="mascota de flint"
-              class="hidden w-[300px] lg:inline"
-              format="webp"
-            />
+              <!-- Imagen de la Persona (1/4 del ancho) -->
+              <div class="flex justify-center">
+                <Image
+                  width="1000"
+                  height="1000"
+                  loading="eager"
+                  src={mascota1}
+                  alt="mascota de flint"
+                  class="hidden w-[300px] lg:inline"
+                  format="webp"
+                />
+              </div>
+            </div>
           </div>
-        </div>
-      </div>
-      <!--Segunda Persona -->
-      <div class="mt-10">
+          <!--Segunda Persona -->
+          <div class="mt-10 p-3">
         <div
-          class="mx-auto p-8 lg:flex items-center justify-between bg-black flex-row-reverse w-[80vw]"
+          class="mx-auto p-8 lg:flex items-center justify-between bg-black flex-row-reverse md:h-[500px] lg:h-[300px] xl:h-[200px]"
         >
           <div class="flex justify-center lg:hidden">
             <Image
@@ -182,6 +184,8 @@ import Layout from "../../layouts/LayoutEn.astro";
             />
           </div>
         </div>
+      </div>
+      </div>
       </div>
     </div>
   </div>

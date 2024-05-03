@@ -76,14 +76,14 @@
         "description": "Merchandising; Packaging: Potenciamos tu marca con diseño de producto de calidad. Desde merchandising hasta packaging, creamos soluciones visuales atractivas que destacan en el mercado.",
         "category": "diseno",
         "icon": "/icons/sketch.webp",
-        "isTopSales": true
+        "isTopSales": false
     },
     {
         "name": "Editorial",
         "description": " Piezas: Dale vida a tus ideas con nuestro diseño editorial. Desde piezas gráficas hasta diseños complejos, damos forma a tu contenido para que destaque y se comunique de manera efectiva.",
         "category": "diseno",
         "icon": "/icons/pencil.webp",
-        "isTopSales": false
+        "isTopSales": true
     },
     {
         "name": "Identidad Corporativa",

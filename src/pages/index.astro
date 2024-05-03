@@ -3,7 +3,7 @@ import Layout from "../layouts/Layout.astro";
 import Hero from "../components/Hero.astro";
 import Caja from "../components/Caja.astro";
 import { Image } from "astro:assets";
-import mascota1 from "../assets/mascota1.png";
+import mascota1 from "../assets/launch.png";
 import  servicios  from "../data/servicios.json";
 import Crumble from "../components/Crumble.astro";
 import Tecnologias from "../components/Tecnologias.astro";
@@ -17,14 +17,14 @@ import AboutUs from "../components/AboutUs.astro";
     <div class="p-8 flex justify-center">
       <Image
         width="1000"
-        height="1000"
+        height="1200"
         loading="eager"
         src={mascota1}
         alt="mascota de flint"
-        class="hidden w-[300px] xl:w-[300px] h-[300px] xl:h-auto lg:inline"
+        class="hidden w-[400px] xl:w-[400px] h-[400px] xl:h-auto lg:inline"
         format="webp"
       />
-      <h1 class="text-2xl md:text-center md:text-5xl lg:p-24 lg:text-7xl">
+      <h1 class="text-2xl md:text-center md:text-5xl lg:py-20 xl:p-24 lg:text-7xl">
         Nuestra selección de<b
           class="text-3xl uppercase block md:text-6xl lg:text-8xl gradient-text font-extrabold"
           >servicios</b
