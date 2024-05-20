@@ -1,68 +1,56 @@
-# Astro Starter Kit: Blog
+# Organizacion del proyecto Flint
 
-```sh
-npm create astro@latest -- --template blog
+## Organizacion de componentes
+
+### Los componentes de los post son los siguientes:
+
+**Post.astro** --> Que es el diesño de de cada tarjeta de post
+
+**PostList.astro** --> Que imprime todos los post que tengo en la carpeta de post haciendo la preview de estos
+
+### Componentes restantes:
+
+**Hero.astro** --> Es solamente el hero y se muestra en el **index.astro**
+
+**Navbar.astro** y **footer.astro** --> Son el respectivo footer y header y estos se encuentran en el **layout.astro**
+
+**Caja.astro** --> Es la caja en la que se muestran los servicios, esta se muestra en el **index.astro** y en **servicios.astro**
+
+**AboutUs.astro** --> Parte de sobre nosotros que se muestra en el **index.astro**
+
+**Crumble.astro** --> Se muestra en el **index.astro** y contiene los diferentes bundles
+
+**Tecnologias.astro** --> El pequeño listado en el que se muestran los iconos de las diferentes tecnologias que manejan
+
+
+## Funcionamiento de FAQ y Servicios:
+
+El FAQ y los Servicios sacan su informacion de los archivos **.json** ubicados en la carpeta **/src/data**. Cualquier cambio que se quiera realizar en los archivos debe respetar el formato. Se pueden agregar o quitar cuantos quiera.
+
+### Archivo servicios.json:
+
+Sintaxis de cada servicio:
+```json
+        {
+        "name": "nombre del servicio",
+        "description": "descripcion del servicio",
+        "category": "categoria a la que pertenece",
+        "icon": "ruta del icono (/icons/nombre)",
+        "isTopSales": "bandera de true o false para mostrarlo en el index"
+        }
 ```
 
-[![Open in StackBlitz](https://developer.stackblitz.com/img/open_in_stackblitz.svg)](https://stackblitz.com/github/withastro/astro/tree/latest/examples/blog)
-[![Open with CodeSandbox](https://assets.codesandbox.io/github/button-edit-lime.svg)](https://codesandbox.io/p/sandbox/github/withastro/astro/tree/latest/examples/blog)
-[![Open in GitHub Codespaces](https://github.com/codespaces/badge.svg)](https://codespaces.new/withastro/astro?devcontainer_path=.devcontainer/blog/devcontainer.json)
+## Funcionamiento del blog
 
-> 🧑‍🚀 **Seasoned astronaut?** Delete this file. Have fun!
+En la carpeta **/src/content** se crea una coleccion que define el formato del blog y cada una de sus partes en el archivo config.ts.
+Ademas luego aqui se van a almacenar los archivos markdown que seran cada articulo del blog, que se subiran mediante TinaCMS.
+En el archivo **[slug].astro** se importa la coleccion creada y con el metodo **getStaticPath()** se obtiene los post por parametro la informacion de cada blog, con una funcion asincrona, y se itera esta lista recibida.
+**PARA MAS INFORMACION RECURRIR A DOCUMENTACION DE ASTRO.**
 
-![blog](https://github.com/withastro/astro/assets/2244813/ff10799f-a816-4703-b967-c78997e8323d)
+### Formato del blog:
 
-Features:
+El blog para que se muestre bien cada **preview** debe comenzar con una descripcion sin ningun tipo de texto markdown, luego debe tener una **imagen de autor** y una **categoria** solamente.
 
-- ✅ Minimal styling (make it your own!)
-- ✅ 100/100 Lighthouse performance
-- ✅ SEO-friendly with canonical URLs and OpenGraph data
-- ✅ Sitemap support
-- ✅ RSS Feed support
-- ✅ Markdown & MDX support
+### Creado por [Mateo Sanchez](https://matesancheez.dev/)
 
-## 🚀 Project Structure
-
-Inside of your Astro project, you'll see the following folders and files:
-
-```text
-├── public/
-├── src/
-│   ├── components/
-│   ├── content/
-│   ├── layouts/
-│   └── pages/
-├── astro.config.mjs
-├── README.md
-├── package.json
-└── tsconfig.json
-```
-
-Astro looks for `.astro` or `.md` files in the `src/pages/` directory. Each page is exposed as a route based on its file name.
-
-There's nothing special about `src/components/`, but that's where we like to put any Astro/React/Vue/Svelte/Preact components.
-
-The `src/content/` directory contains "collections" of related Markdown and MDX documents. Use `getCollection()` to retrieve posts from `src/content/blog/`, and type-check your frontmatter using an optional schema. See [Astro's Content Collections docs](https://docs.astro.build/en/guides/content-collections/) to learn more.
-
-Any static assets, like images, can be placed in the `public/` directory.
-
-## 🧞 Commands
-
-All commands are run from the root of the project, from a terminal:
-
-| Command                   | Action                                           |
-| :------------------------ | :----------------------------------------------- |
-| `npm install`             | Installs dependencies                            |
-| `npm run dev`             | Starts local dev server at `localhost:4321`      |
-| `npm run build`           | Build your production site to `./dist/`          |
-| `npm run preview`         | Preview your build locally, before deploying     |
-| `npm run astro ...`       | Run CLI commands like `astro add`, `astro check` |
-| `npm run astro -- --help` | Get help using the Astro CLI                     |
-
-## 👀 Want to learn more?
-
-Check out [our documentation](https://docs.astro.build) or jump into our [Discord server](https://astro.build/chat).
-
-## Credit
-
-This theme is based off of the lovely [Bear Blog](https://github.com/HermanMartinus/bearblog/).
+![MS](https://github.com/matesancheez/porfolio/blob/main/public/assets/images/favicon_package/mstile-150x150.png?raw=true)
