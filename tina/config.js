@@ -83,11 +83,6 @@ export default defineConfig({
             required: true
           },
           {
-            type: "boolean",
-            name: "featured",
-            label: "Featured",
-          },
-          {
             type: "string",
             name: "title",
             label: "Title",
@@ -154,11 +149,6 @@ export default defineConfig({
             name: "image",
             label: "Imagen",
             required: true
-          },
-          {
-            type: "boolean",
-            name: "featured",
-            label: "Featured",
           },
           {
             type: "string",
