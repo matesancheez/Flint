@@ -126,12 +126,12 @@ export default defineConfig({
             list: true,
             options:[
               {
-                value:"studio tips",
-                label:"Studio Tips"
+                value:"Xa",
+                label:"Xa"
               },
               {
-                value: "career advice",
-                label: "Career Advice"
+                value: "Xb",
+                label: "Xb"
               },
               {
                 value: "insights",
