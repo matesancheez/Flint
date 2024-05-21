@@ -53,12 +53,12 @@ export default defineConfig({
             list: true,
             options:[
               {
-                value:"Xa",
-                label:"Xa"
+                value:"studio tips",
+                label:"Studio Tips"
               },
               {
-                value: "Xb",
-                label: "Xb"
+                value: "career advice",
+                label: "Career Advice"
               },
               {
                 value: "insights",
@@ -81,6 +81,11 @@ export default defineConfig({
             name: "image",
             label: "Imagen",
             required: true
+          },
+          {
+            type: "boolean",
+            name: "featured",
+            label: "Featured",
           },
           {
             type: "string",
@@ -149,6 +154,11 @@ export default defineConfig({
             name: "image",
             label: "Imagen",
             required: true
+          },
+          {
+            type: "boolean",
+            name: "featured",
+            label: "Featured",
           },
           {
             type: "string",
