@@ -88,11 +88,6 @@ export default defineConfig({
             label: "Featured",
           },
           {
-            type: "boolean",
-            name: "positivo",
-            label: "Positivo",
-          },
-          {
             type: "string",
             name: "title",
             label: "Title",
