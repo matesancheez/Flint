@@ -103,96 +103,48 @@ import Layout from "../layouts/Layout.astro";
 
       <!--Video de reemplazo -->
       <div class="flex justify-center">
-        <iframe width="914" height="514" src="https://www.youtube.com/embed/UDFuqwRv2WM" title="Buscando el TACO IDEAL | RADAR con Adrián Marcelo" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+        <iframe width="914" height="514" src="https://www.youtube.com/embed/ogDWyQCZRxk" title="Poderme Acostumbrar - Acústico" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
       </div>
     </div>
 
     <!--Seccion de personas -->
+
     <div class="mt-28">
-      <h2 class="text-6xl font-bold text-center">Our Team</h2>
-      <div class="container">
-      <div class="md:flex block">
-          <!--Primera Persona -->
-          <div class="mt-10 p-3">
-            <div
-              class="mx-auto p-8 lg:flex items-center justify-between bg-black md:h-[500px] lg:h-[300px] xl:h-[200px]"
-            >
-              <div class="flex justify-center lg:hidden">
-                <Image
-                  width="1000"
-                  height="1000"
-                  loading="eager"
-                  src={mascota1}
-                  alt="mascota de flint"
-                  class="w-[200px]"
-                  format="webp"
-                />
-              </div>
-
-              <!-- Información de la Persona (3/4 del ancho) -->
-              <div class="text-center lg:text-start">
-                <h1 class="text-4xl font-bold mb-4">Nicolas Dousset</h1>
-                <p class="text-lg mb-4">Data</p>
-                <p>
-                  A brief description about the person. You can add more details
-                  here.
-                </p>
-              </div>
-
-              <!-- Imagen de la Persona (1/4 del ancho) -->
-              <div class="flex justify-center">
-                <Image
-                  width="1000"
-                  height="1000"
-                  loading="eager"
-                  src={mascota1}
-                  alt="mascota de flint"
-                  class="hidden w-[300px] lg:inline"
-                  format="webp"
-                />
-              </div>
-            </div>
-          </div>
-          <!--Segunda Persona -->
-          <div class="mt-10 p-3">
-        <div
-          class="mx-auto p-8 lg:flex items-center justify-between bg-black flex-row-reverse md:h-[500px] lg:h-[300px] xl:h-[200px]"
-        >
-          <div class="flex justify-center lg:hidden">
-            <Image
-              width="1000"
-              height="1000"
+      <h2 class="text-6xl font-bold text-center">Nuestro equipo</h2>
+      <div class="container  lg:flex justify-center gap-5 mt-10">
+        
+        <div class="my-5 flex flex-col items-center border  rounded-lg shadow md:flex-row md:max-w-xl  border-black bg-black hover:bg-black/75">
+          <Image
+              width="300"
+              height="300"
               loading="eager"
               src={mascota1}
               alt="mascota de flint"
-              class="w-[200px]"
+              class="lg:inline"
               format="webp"
             />
-          </div>
-
-          <div class="text-center lg:text-start lg:w-[80%]">
-            <h1 class="text-4xl font-bold mb-4">Julian Gonzalez</h1>
-            <p class="text-lg mb-4">Data</p>
-            <p>
-              A brief description about the person. You can add more details
-              here.
-            </p>
-          </div>
-
-          <div class="flex justify-center">
-            <Image
-              width="1000"
-              height="1000"
-              loading="eager"
-              src={mascota1}
-              alt="mascota de flint"
-              class="hidden w-[300px] lg:inline"
-              format="webp"
-            />
+          <div class="flex flex-col justify-between p-4 leading-normal">
+              <h5 class="mb-2 text-2xl font-bold tracking-tight text-white">Jose Lopez</h5>
+              <p class="mb-3 font-normal text-gray-400">especialista en marketing digital con más de 5 años de experiencia, apasionado por crear estrategias innovadoras que impulsan el crecimiento de las marcas.</p>
           </div>
         </div>
-      </div>
-      </div>
+
+        <div class="my-5 flex flex-col items-center border  rounded-lg shadow md:flex-row md:max-w-xl  border-black bg-black hover:bg-black/75">
+          <Image
+              width="300"
+              height="300"
+              loading="eager"
+              src={mascota1}
+              alt="mascota de flint"
+              class="lg:inline"
+              format="webp"
+            />
+          <div class="flex flex-col justify-between p-4 leading-normal">
+              <h5 class="mb-2 text-2xl font-bold tracking-tight text-white">Juan Perz</h5>
+              <p class="mb-3 font-normal text-gray-400">especialista en marketing digital con más de 5 años de experiencia, apasionado por crear estrategias innovadoras que impulsan el crecimiento de las marcas.</p>
+          </div>
+        </div>
+
       </div>
     </div>
   </div>
